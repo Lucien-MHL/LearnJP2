@@ -1,8 +1,7 @@
-# React + Vite
+# LearnJP2
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+這是第二次製作，目前還在開發階段，所以暫時無任何內容可介紹的。
 
-Currently, two official plugins are available:
+**但有一點可以說一下，為何不在原本的 LearnJP 裡做更 新?**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+原因在於我想練習重頭到尾的開發，包含專案建置、部署等，也順便練習自己寫程式的速度。
