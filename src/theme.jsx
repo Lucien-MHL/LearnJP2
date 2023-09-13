@@ -8,7 +8,8 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   :root {
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    src: url(./assets/font/NotoSerifJP.otf);
+    font-family: 'Noto Serif JP', sans-serif;
     color: ${({ theme }) => theme.mercury};
     background-color: ${({ theme }) => theme.pickled_blue_wood};
     text-rendering: optimizeLegibility;
