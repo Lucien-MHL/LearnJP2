@@ -1,0 +1,26 @@
+name: Delete Branch after PR Merge
+
+on:
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  close_branch:
+    name: Automatic Close Branch
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check PR status
+        id: pr_status
+        run: echo "PR_STATUS=merged" >> $GITHUB_ENV
+        if: github.event.pull_request.merged == true
+
+      - name: Delete Remote Branch
+        if: steps.pr_status.outputs.PR_STATUS == 'merged'
+        run: |
+          # Extract the branch name from the PR's source branch
+          BRANCH_NAME=$(echo "${{ github.event.pull_request.head.ref }}")
+
+          # Delete the remote branch
+          git push origin --delete $BRANCH_NAME
