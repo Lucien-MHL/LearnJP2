@@ -1,5 +1,5 @@
 function App() {
-  return <h1>こにちは。</h1>
+  return <h1>test pr template</h1>
 }
 
 export default App
