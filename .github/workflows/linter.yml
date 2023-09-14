@@ -1,4 +1,4 @@
-name: Deploy
+name: Linter
 
 on: [pull_request]
 
