@@ -1,11 +1,11 @@
-name: Deploy
+name: Linter
 
 on: [pull_request]
 
 jobs:
   check:
     name: Check Code & Lint Code Base
-    runs-on: ubuntu-latst
+    runs-on: ubuntu-latest
     steps:
       # Checkout Code Base
       - name: Checkout
