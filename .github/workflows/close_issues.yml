@@ -1,0 +1,29 @@
+name: Automatic Close Issue
+
+on:
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  close-issue:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check PR status
+        id: pr_status
+        run: echo "PR_STATUS=merged" >> $GITHUB_ENV
+        if: github.event.pull_request.merged == true
+
+      - name: Close Issue
+        if: steps.pr_status.outputs.PR_STATUS == 'merged'
+        run: |
+          # Extract the issue number from the PR title
+          ISSUE_NUMBER=$(echo "${{ github.event.pull_request.title }}" | grep -o '#[0-9]\+')
+
+          # Remove the '#' character from the issue number
+          ISSUE_NUMBER=${ISSUE_NUMBER##'#'}
+
+          # Close the issue
+          echo "Closing issue $ISSUE_NUMBER"
+          curl -X POST -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" -d '{"state":"closed"}' "https://api.github.com/repos/${{ github.repository }}/issues/$ISSUE_NUMBER"
