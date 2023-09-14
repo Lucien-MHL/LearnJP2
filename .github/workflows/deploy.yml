@@ -1,0 +1,47 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout project repository
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      # Setup Node.js environment
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: lts
+
+      # Install dependencies
+      - name: Install dependencies
+        run: yarn install --prefer-offline
+
+      # Build Application
+      - name: Build application
+        run: yarn build
+
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      # Deploy to Github Pages
+      - id: deploy
+        name: Deploy to Github Pages
+        uses: fcodelabs/react-deploy-github-pages-action@v1.0.0
+        with:
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
