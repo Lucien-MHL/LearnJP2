@@ -1,0 +1,19 @@
+name: Deploy
+
+on: [pull_request]
+
+jobs:
+  check:
+    name: Check Code & Lint Code Base
+    runs-on: ubuntu-latst
+    steps:
+      # Checkout Code Base
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Lint Code Base
+        uses: github/super-linter@v4
+        env:
+          VALIDATE_ALL_CODEBASE: false
+          FILTER_REGEX_INCLUDE: .*src/.*
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
