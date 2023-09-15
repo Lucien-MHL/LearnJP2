@@ -1,5 +1,12 @@
+import { useTranslation } from 'react-i18next'
+
 function App() {
-  return <h1>test pr template</h1>
+  const { t } = useTranslation()
+  return (
+    <>
+      <h1>{t('homepage_title.main')}</h1>
+    </>
+  )
 }
 
 export default App
