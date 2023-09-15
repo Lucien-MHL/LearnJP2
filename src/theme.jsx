@@ -23,6 +23,7 @@ export const GlobalStyle = createGlobalStyle`
   #root {
     width: 100%;
     height: 100%;
+    white-space: pre-line; /* This command allow you to use escape character */
   }
 `
 
