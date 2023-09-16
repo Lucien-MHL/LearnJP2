@@ -1,6 +1,11 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
+  @font-face {
+    font-family: BIZUDPMincho;
+    src: url(src/assets/font/BIZUDPMincho-Regular.ttf);
+  }
+
   * {
     margin: 0;
     padding: 0;
@@ -8,8 +13,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   :root {
-    src: url(./assets/font/NotoSerifJP.otf);
-    font-family: 'Noto Serif JP', sans-serif;
+    font-family: BIZUDPMincho, sans-serif;
     color: ${({ theme }) => theme.mercury};
     background-color: ${({ theme }) => theme.pickled_blue_wood};
     text-rendering: optimizeLegibility;

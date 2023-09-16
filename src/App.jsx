@@ -5,6 +5,7 @@ function App() {
   return (
     <>
       <h1>{t('homepage_title.main')}</h1>
+      <p style={{ fontSize: '3rem' }}>シツチ</p>
     </>
   )
 }
