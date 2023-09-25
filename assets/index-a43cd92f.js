@@ -86,7 +86,7 @@ Error generating stack: `+o.message+`
   :root {
     font-family: BIZUDPMincho, sans-serif;
     color: ${({theme:e})=>e.mercury};
-    background-image: url('src/assets/picture/templeWithFuji.jpg');
+    background-image: url('/public/templeWithFuji.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -177,7 +177,7 @@ Error generating stack: `+o.message+`
       left: 0;
       margin: auto;
       z-index: -1;
-      background: url('src/assets/picture/lantern.png');
+      background: url('/public/lantern.png');
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
