@@ -3,7 +3,7 @@ import { createGlobalStyle } from 'styled-components'
 export const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: BIZUDPMincho;
-    src: url(src/assets/font/BIZUDPMincho-Regular.ttf);
+    src: url(./font/BIZUDPMincho-Regular.ttf);
   }
 
   * {
@@ -15,7 +15,7 @@ export const GlobalStyle = createGlobalStyle`
   :root {
     font-family: BIZUDPMincho, sans-serif;
     color: ${({ theme }) => theme.mercury};
-    background-image: url('/public/templeWithFuji.jpg');
+    background-image: url('./templeWithFuji.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
