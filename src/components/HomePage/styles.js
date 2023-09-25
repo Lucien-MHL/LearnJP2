@@ -53,7 +53,7 @@ export const S = {
       left: 0;
       margin: auto;
       z-index: -1;
-      background: url('/public/lantern.png');
+      background: url('./lantern.png');
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
