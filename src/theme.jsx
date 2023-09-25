@@ -15,7 +15,10 @@ export const GlobalStyle = createGlobalStyle`
   :root {
     font-family: BIZUDPMincho, sans-serif;
     color: ${({ theme }) => theme.mercury};
-    background-color: ${({ theme }) => theme.pickled_blue_wood};
+    background-image: url('src/assets/picture/templeWithFuji.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     text-rendering: optimizeLegibility;
   }
 
@@ -34,7 +37,7 @@ export const GlobalStyle = createGlobalStyle`
 export const Palette = {
   mine_shaft: '#242424',
   mercury: '#e3e3e3',
-  pickled_blue_wood: '#2F464F',
+  pickled_blue_wood: '#0d2b37',
   black: '#000000',
   green: '#77f779',
   red: '#f52727',

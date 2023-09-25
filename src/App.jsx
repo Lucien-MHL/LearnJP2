@@ -1,13 +1,8 @@
-import { useTranslation } from 'react-i18next'
+import { RouterProvider } from 'react-router-dom'
+import { router } from './routes/root.jsx'
 
 function App() {
-  const { t } = useTranslation()
-  return (
-    <>
-      <h1>{t('homepage_title.main')}</h1>
-      <p style={{ fontSize: '3rem' }}>シツチ</p>
-    </>
-  )
+  return <RouterProvider router={router} />
 }
 
 export default App

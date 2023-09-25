@@ -2,5 +2,9 @@
   "homepage_title": {
     "main": "五十音",
     "sub": "學習網站"
-  }
+  },
+  "hiragana": "平假名 清音",
+  "katakana": "片假名 清音",
+  "hiraganaDakuon": "平假名 濁音",
+  "katakanaDakuon": "片假名 濁音"
 }
