@@ -1,4 +1,5 @@
 import ErrorPage from '../components/ErrorPage'
-import HomePage from '../components/HomePage'
+// import HomePage from '../components/HomePage'
+import HomePageM from '../components/HomePageM'
 
-export { ErrorPage, HomePage }
+export { ErrorPage, HomePageM as HomePage }
