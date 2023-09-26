@@ -8,6 +8,7 @@ export const S = {
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: ${({ theme }) => theme.mercury};
   `,
   Title: styled.header`
     margin-top: 40px;

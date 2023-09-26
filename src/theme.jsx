@@ -14,7 +14,6 @@ export const GlobalStyle = createGlobalStyle`
 
   :root {
     font-family: BIZUDPMincho, sans-serif;
-    color: ${({ theme }) => theme.mercury};
     text-rendering: optimizeLegibility;
   }
 

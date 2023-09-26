@@ -24,16 +24,14 @@ const webBackground = css`
   }
 `
 
+const mobileBackground = css`
+  background-color: ${({ theme }) => theme.pickled_blue_wood};
+`
+
 export const S = {
   Container: styled.div`
     width: 100%;
     height: 100%;
-    /* TODO:
-         條件式渲染。
-         For Web show webBackground.
-         For mobile show pickled_blue_wood.
-    */
-    /* ${webBackground} */
-    background-color: ${({ theme }) => theme.pickled_blue_wood};
+    ${({ $isDesktop }) => ($isDesktop ? webBackground : mobileBackground)}
   `,
 }
