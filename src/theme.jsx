@@ -15,10 +15,6 @@ export const GlobalStyle = createGlobalStyle`
   :root {
     font-family: BIZUDPMincho, sans-serif;
     color: ${({ theme }) => theme.mercury};
-    background-image: url('./templeWithFuji.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     text-rendering: optimizeLegibility;
   }
 
