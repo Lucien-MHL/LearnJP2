@@ -1,8 +1,10 @@
 import { useTranslation } from 'react-i18next'
 import { S } from './styles'
+import { linkData } from '../linkData'
 
 export default function MobileView() {
   const { t } = useTranslation()
+
   return (
     <S.Container>
       <S.Title>
@@ -10,10 +12,11 @@ export default function MobileView() {
         <S.Sub>{t('homepage_title.sub')}</S.Sub>
       </S.Title>
       <S.LinkGroup>
-        <S.LinkButton>{t('hiragana')}</S.LinkButton>
-        <S.LinkButton>{t('katakana')}</S.LinkButton>
-        <S.LinkButton>{t('hiraganaDakuon')}</S.LinkButton>
-        <S.LinkButton>{t('katakanaDakuon')}</S.LinkButton>
+        {linkData().map(e => (
+          <S.LinkButton key={e.key} to={e.link}>
+            {t(e.key)}
+          </S.LinkButton>
+        ))}
       </S.LinkGroup>
     </S.Container>
   )

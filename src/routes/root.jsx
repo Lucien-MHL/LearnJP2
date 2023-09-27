@@ -12,19 +12,10 @@ export const router = createHashRouter([
         path: path.HomePage,
         element: <pages.HomePage />,
       },
-      /** TODO:
-       *    遊戲頁面在製作時才開啟，目前先註
-       *    解掉。
-       */
-      // {
-      //   path: path.GamePage,
-      //   element: (
-      //     <>
-      //       <h1>遊戲頁面</h1>
-      //       <Link to={path.HomePage}>Go to Home</Link>
-      //     </>
-      //   ),
-      // },
+      {
+        path: path.GamePage,
+        element: <pages.GamePage />,
+      },
     ],
   },
 ])
