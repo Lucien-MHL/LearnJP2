@@ -6,5 +6,7 @@
   "hiragana": "平假名 清音",
   "katakana": "片假名 清音",
   "hiraganaDakuon": "平假名 濁音",
-  "katakanaDakuon": "片假名 濁音"
+  "katakanaDakuon": "片假名 濁音",
+  "current": "目前: {{current}}",
+  "total": "共: {{total}}"
 }
