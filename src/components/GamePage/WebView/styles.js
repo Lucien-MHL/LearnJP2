@@ -14,10 +14,12 @@ export const S = {
     -webkit-backdrop-filter: blur(1.8px);
     border: 1px solid ${({ theme }) => theme.white + 'aa'};
     position: relative;
+    user-select: none;
   `,
   HomeIcon: styled(Link)`
     display: block;
     position: absolute;
+    z-index: 1;
     top: 40px;
     left: -40px;
     width: 80px;
