@@ -34,6 +34,9 @@ export const Palette = {
   mercury: '#e3e3e3',
   pickled_blue_wood: '#0d2b37',
   black: '#000000',
+  white: '#ffffff',
   green: '#77f779',
   red: '#f52727',
+  dark_green: '#073400',
+  brown: '#6D4200',
 }
