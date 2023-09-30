@@ -1,4 +1,4 @@
-import{s as o,L as u,g as x,j as t}from"./index-d0ee18ac.js";import{u as f}from"./useTranslation-9e997947.js";const n={Container:o.div`
+import{s as o,L as u,g as x,j as t}from"./index-d9862568.js";import{u as f}from"./useTranslation-3b9b6a02.js";const n={Container:o.div`
     width: 1000px;
     height: 95%;
     margin: auto;
@@ -10,9 +10,11 @@ import{s as o,L as u,g as x,j as t}from"./index-d0ee18ac.js";import{u as f}from"
     -webkit-backdrop-filter: blur(1.8px);
     border: 1px solid ${({theme:e})=>e.white+"aa"};
     position: relative;
+    user-select: none;
   `,HomeIcon:o(u)`
     display: block;
     position: absolute;
+    z-index: 1;
     top: 40px;
     left: -40px;
     width: 80px;
