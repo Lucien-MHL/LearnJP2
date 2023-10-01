@@ -1,4 +1,4 @@
-import{s as o,L as u,g as x,j as t}from"./index-d9862568.js";import{u as f}from"./useTranslation-3b9b6a02.js";const n={Container:o.div`
+import{s as o,L as n,j as t}from"./index-996b2f3b.js";import{H as r}from"./Home-0ff9007d.js";import{u as s}from"./useTranslation-4ba64dae.js";const i={Container:o.div`
     width: 1000px;
     height: 95%;
     margin: auto;
@@ -11,7 +11,7 @@ import{s as o,L as u,g as x,j as t}from"./index-d9862568.js";import{u as f}from"
     border: 1px solid ${({theme:e})=>e.white+"aa"};
     position: relative;
     user-select: none;
-  `,HomeIcon:o(u)`
+  `,HomeIcon:o(n)`
     display: block;
     position: absolute;
     z-index: 1;
@@ -93,4 +93,4 @@ import{s as o,L as u,g as x,j as t}from"./index-d9862568.js";import{u as f}from"
     height: 100%;
     font-size: 5rem;
     text-align: center;
-  `};var p={exports:{}},m="SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED",b=m,y=b;function c(){}function l(){}l.resetWarningCache=c;var g=function(){function e(j,T,k,v,S,d){if(d!==y){var a=new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");throw a.name="Invariant Violation",a}}e.isRequired=e;function r(){return e}var i={array:e,bigint:e,bool:e,func:e,number:e,object:e,string:e,symbol:e,any:e,arrayOf:r,element:e,elementType:e,instanceOf:r,node:e,objectOf:r,oneOf:r,oneOfType:r,shape:r,exact:r,checkPropTypes:l,resetWarningCache:c};return i.PropTypes=i,i};p.exports=g();var w=p.exports;const s=x(w);function h({color:e,size:r="30px"}){const i=e||"none";return t.jsxs("svg",{xmlns:"http://www.w3.org/2000/svg",fill:i,width:r,height:r,viewBox:"0 0 512 512",children:[t.jsx("path",{fill:"currentColor",d:"M261.56 101.28a8 8 0 0 0-11.06 0L66.4 277.15a8 8 0 0 0-2.47 5.79L63.9 448a32 32 0 0 0 32 32H192a16 16 0 0 0 16-16V328a8 8 0 0 1 8-8h80a8 8 0 0 1 8 8v136a16 16 0 0 0 16 16h96.06a32 32 0 0 0 32-32V282.94a8 8 0 0 0-2.47-5.79Z"}),t.jsx("path",{fill:"currentColor",d:"m490.91 244.15l-74.8-71.56V64a16 16 0 0 0-16-16h-48a16 16 0 0 0-16 16v32l-57.92-55.38C272.77 35.14 264.71 32 256 32c-8.68 0-16.72 3.14-22.14 8.63l-212.7 203.5c-6.22 6-7 15.87-1.34 22.37A16 16 0 0 0 43 267.56L250.5 69.28a8 8 0 0 1 11.06 0l207.52 198.28a16 16 0 0 0 22.59-.44c6.14-6.36 5.63-16.86-.76-22.97Z"})]})}h.propTypes={color:s.string,size:s.string};function $(){const{t:e}=f();return t.jsxs(n.Container,{children:[t.jsx(n.HomeIcon,{to:"/",children:t.jsx(h,{size:"100%"})}),t.jsx(n.QuestionSection,{children:t.jsx(n.Subject,{children:"シ"})}),t.jsx(n.InputSection,{children:t.jsxs(n.Blackboard,{children:[t.jsxs(n.NumberOfQuestion,{children:[t.jsx(n.Current,{children:e("current",{current:1})}),t.jsxs(n.Total,{children:[e("total",{total:46})," "]})]}),t.jsx(n.Input,{type:"text",placeholder:"輸入答案"})]})})]})}export{$ as default};
+  `};function c(){const{t:e}=s();return t.jsxs(i.Container,{children:[t.jsx(i.HomeIcon,{to:"/",children:t.jsx(r,{size:"100%"})}),t.jsx(i.QuestionSection,{children:t.jsx(i.Subject,{children:"シ"})}),t.jsx(i.InputSection,{children:t.jsxs(i.Blackboard,{children:[t.jsxs(i.NumberOfQuestion,{children:[t.jsx(i.Current,{children:e("current",{current:1})}),t.jsxs(i.Total,{children:[e("total",{total:46})," "]})]}),t.jsx(i.Input,{type:"text",placeholder:"輸入答案"})]})})]})}export{c as default};
