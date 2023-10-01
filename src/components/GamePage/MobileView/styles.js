@@ -14,19 +14,13 @@ export const S = {
     top: 16px;
     left: 16px;
     padding: 2px 4px;
-    cursor: pointer;
     color: ${({ theme }) => theme.mercury};
-
-    &:hover {
-      scale: 1.25;
-      transition: 0.25s;
-    }
   `,
 
   QuestionSection: styled.section`
     width: 300px;
     height: 264px;
-    margin: 120px auto 30px;
+    margin: 100px auto 30px;
     border-radius: 10px;
     background-color: ${({ theme }) => theme.mercury};
     color: ${({ theme }) => theme.mine_shaft};
@@ -57,5 +51,40 @@ export const S = {
     border-radius: 25px;
     background-color: ${({ theme }) => theme.mercury};
     box-shadow: 0px 3px 8px ${({ theme }) => theme.black}80;
+  `,
+  AnswerSection: styled.main`
+    color: ${({ theme }) => theme.mercury};
+    padding-top: 40px;
+  `,
+  Options: styled.section`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 1rem auto 0;
+    padding: 0.5rem 0;
+    width: 300px;
+    border: 1px solid ${({ theme }) => theme.mercury};
+    border-radius: 15px;
+    position: relative;
+
+    &::before {
+      content: '請從以下選取正確拼音';
+      position: absolute;
+      width: 180px;
+      text-align: center;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      translate: 0 -50%;
+      background: ${({ theme }) => theme.pickled_blue_wood};
+    }
+  `,
+  Item: styled.p`
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0.75rem;
+    margin: 0.5rem;
+    width: 60px;
   `,
 }

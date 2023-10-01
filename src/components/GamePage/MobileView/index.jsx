@@ -11,6 +11,16 @@ export default function MobileView() {
         <S.Subject>ツ</S.Subject>
         <S.Count>1/46</S.Count>
       </S.QuestionSection>
+      <S.AnswerSection>
+        <S.Options>
+          <S.Item>shi</S.Item>
+          <S.Item>wa</S.Item>
+          <S.Item>se</S.Item>
+          <S.Item>o</S.Item>
+          <S.Item>tsu</S.Item>
+          <S.Item>fu</S.Item>
+        </S.Options>
+      </S.AnswerSection>
     </S.Container>
   )
 }
