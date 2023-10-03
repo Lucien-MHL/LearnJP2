@@ -8,5 +8,6 @@
   "hiraganaDakuon": "平假名 濁音",
   "katakanaDakuon": "片假名 濁音",
   "current": "目前: {{current}}",
-  "total": "共: {{total}}"
+  "total": "共: {{total}}",
+  "chose_answer": "請從以下選取正確拼音"
 }
