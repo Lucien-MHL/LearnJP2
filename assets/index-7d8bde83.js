@@ -1,4 +1,4 @@
-import{s as o,L as r,u as s,j as t}from"./index-7ffcadc8.js";import{H as a}from"./Home-6225f4f9.js";import{u as l}from"./useTranslation-b24099af.js";const i={Container:o.div`
+import{s as o,L as u,u as x,a as r,b as s,j as t,n as h}from"./index-6cebc831.js";import{u as b,H as f}from"./Home-6b989d9e.js";import{u as m}from"./useTranslation-153b6bc3.js";const n={Container:o.div`
     width: 1000px;
     height: 95%;
     margin: auto;
@@ -11,7 +11,7 @@ import{s as o,L as r,u as s,j as t}from"./index-7ffcadc8.js";import{H as a}from"
     border: 1px solid ${({theme:e})=>e.white+"aa"};
     position: relative;
     user-select: none;
-  `,HomeIcon:o(r)`
+  `,HomeIcon:o(u)`
     display: block;
     position: absolute;
     z-index: 1;
@@ -93,4 +93,4 @@ import{s as o,L as r,u as s,j as t}from"./index-7ffcadc8.js";import{H as a}from"
     height: 100%;
     font-size: 5rem;
     text-align: center;
-  `};function x(){const{t:e}=l(),n=s();return t.jsx(t.Fragment,{children:n.isResize()?t.jsx("h1",{children:"請改回正確的裝置大小"}):t.jsxs(i.Container,{children:[t.jsx(i.HomeIcon,{to:"/",children:t.jsx(a,{size:"100%"})}),t.jsx(i.QuestionSection,{children:t.jsx(i.Subject,{children:"シ"})}),t.jsx(i.InputSection,{children:t.jsxs(i.Blackboard,{children:[t.jsxs(i.NumberOfQuestion,{children:[t.jsx(i.Current,{children:e("current",{current:1})}),t.jsxs(i.Total,{children:[e("total",{total:46})," "]})]}),t.jsx(i.Input,{type:"text",placeholder:"輸入答案"})]})})]})})}export{x as default};
+  `};function k(){const{t:e}=m(),c=x(),l=b(),a=r(i=>s(i,"current")),p=r(i=>s(i,"total")),d=r(i=>s(i,"count"));return t.jsx(t.Fragment,{children:c.isResize()?t.jsx("h1",{children:"請改回正確的裝置大小"}):t.jsxs(n.Container,{children:[t.jsx(n.HomeIcon,{to:"/",children:t.jsx(f,{size:"100%"})}),t.jsx(n.QuestionSection,{children:t.jsx(n.Subject,{children:a.word})}),t.jsx(n.InputSection,{onSubmit:i=>{i.preventDefault(),l(h(a.id))},children:t.jsxs(n.Blackboard,{children:[t.jsxs(n.NumberOfQuestion,{children:[t.jsx(n.Current,{children:e("current",{current:d})}),t.jsxs(n.Total,{children:[e("total",{total:p})," "]})]}),t.jsx(n.Input,{type:"text",placeholder:e("input_answer")})]})})]})})}export{k as default};
