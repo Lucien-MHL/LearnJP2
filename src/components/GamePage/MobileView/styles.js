@@ -68,7 +68,7 @@ export const S = {
     position: relative;
 
     &::before {
-      content: '請從以下選取正確拼音';
+      content: ${({ $content }) => `'${$content}'`};
       position: absolute;
       width: 180px;
       text-align: center;

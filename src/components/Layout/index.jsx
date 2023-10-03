@@ -1,13 +1,14 @@
 import { Outlet } from 'react-router-dom'
 import { S } from './styles'
-import { useMediaQuery } from 'react-responsive'
+import { useDevice } from '../../hooks'
 
 export default function Layout() {
-  const isDesktop = useMediaQuery({ minWidth: 1280 })
+  const device = useDevice()
+  const isMobile = device.isMobile()
 
   return (
-    <S.Container $isDesktop={isDesktop}>
-      <Outlet context={isDesktop} />
+    <S.Container $isMobile={isMobile}>
+      <Outlet />
     </S.Container>
   )
 }
