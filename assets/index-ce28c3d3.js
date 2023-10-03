@@ -1,16 +1,16 @@
-import{s as o,L as n,j as t}from"./index-996b2f3b.js";import{H as r}from"./Home-0ff9007d.js";const i={Container:o.div`
+import{s as n,L as r,u as s,j as t}from"./index-7ffcadc8.js";import{H as c}from"./Home-6225f4f9.js";import{u as a}from"./useTranslation-b24099af.js";const i={Container:n.div`
     display: flex;
     flex-direction: column;
     width: 100%;
     height: 100%;
     margin: auto;
-  `,HomeIcon:o(n)`
+  `,HomeIcon:n(r)`
     position: absolute;
     top: 16px;
     left: 16px;
     padding: 2px 4px;
     color: ${({theme:e})=>e.mercury};
-  `,QuestionSection:o.section`
+  `,QuestionSection:n.section`
     width: 300px;
     height: 264px;
     margin: 100px auto 30px;
@@ -23,11 +23,11 @@ import{s as o,L as n,j as t}from"./index-996b2f3b.js";import{H as r}from"./Home-
     display: flex;
     align-items: center;
     justify-content: center;
-  `,Subject:o.p`
+  `,Subject:n.p`
     font-weight: bold;
     text-align: center;
     font-size: 13rem;
-  `,Count:o.p`
+  `,Count:n.p`
     width: 50%;
     height: 50px;
     position: absolute;
@@ -42,10 +42,10 @@ import{s as o,L as n,j as t}from"./index-996b2f3b.js";import{H as r}from"./Home-
     border-radius: 25px;
     background-color: ${({theme:e})=>e.mercury};
     box-shadow: 0px 3px 8px ${({theme:e})=>e.black}80;
-  `,AnswerSection:o.main`
+  `,AnswerSection:n.main`
     color: ${({theme:e})=>e.mercury};
     padding-top: 40px;
-  `,Options:o.section`
+  `,Options:n.section`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -57,7 +57,7 @@ import{s as o,L as n,j as t}from"./index-996b2f3b.js";import{H as r}from"./Home-
     position: relative;
 
     &::before {
-      content: '請從以下選取正確拼音';
+      content: ${({$content:e})=>`'${e}'`};
       position: absolute;
       width: 180px;
       text-align: center;
@@ -68,10 +68,10 @@ import{s as o,L as n,j as t}from"./index-996b2f3b.js";import{H as r}from"./Home-
       translate: 0 -50%;
       background: ${({theme:e})=>e.pickled_blue_wood};
     }
-  `,Item:o.p`
+  `,Item:n.p`
     font-size: 1.5rem;
     text-align: center;
     padding: 0.75rem;
     margin: 0.5rem;
     width: 60px;
-  `};function c(){return t.jsxs(i.Container,{children:[t.jsx(i.HomeIcon,{to:"/",children:t.jsx(r,{})}),t.jsxs(i.QuestionSection,{children:[t.jsx(i.Subject,{children:"ツ"}),t.jsx(i.Count,{children:"1/46"})]}),t.jsx(i.AnswerSection,{children:t.jsxs(i.Options,{children:[t.jsx(i.Item,{children:"shi"}),t.jsx(i.Item,{children:"wa"}),t.jsx(i.Item,{children:"se"}),t.jsx(i.Item,{children:"o"}),t.jsx(i.Item,{children:"tsu"}),t.jsx(i.Item,{children:"fu"})]})})]})}export{c as default};
+  `};function d(){const{t:e}=a(),o=s();return t.jsx(t.Fragment,{children:o.isResize()?t.jsx("h1",{children:"請改回正確的裝置大小"}):t.jsxs(i.Container,{children:[t.jsx(i.HomeIcon,{to:"/",children:t.jsx(c,{})}),t.jsxs(i.QuestionSection,{children:[t.jsx(i.Subject,{children:"ツ"}),t.jsx(i.Count,{children:"1/46"})]}),t.jsx(i.AnswerSection,{children:t.jsxs(i.Options,{$content:e("chose_answer"),children:[t.jsx(i.Item,{children:"shi"}),t.jsx(i.Item,{children:"wa"}),t.jsx(i.Item,{children:"se"}),t.jsx(i.Item,{children:"o"}),t.jsx(i.Item,{children:"tsu"}),t.jsx(i.Item,{children:"fu"})]})})]})})}export{d as default};
