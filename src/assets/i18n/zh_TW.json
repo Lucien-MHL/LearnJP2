@@ -9,5 +9,6 @@
   "katakanaDakuon": "片假名 濁音",
   "current": "目前: {{current}}",
   "total": "共: {{total}}",
-  "chose_answer": "請從以下選取正確拼音"
+  "chose_answer": "請從以下選取正確拼音",
+  "input_answer": "輸入答案"
 }

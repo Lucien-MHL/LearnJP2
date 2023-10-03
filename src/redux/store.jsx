@@ -1,8 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit'
-import temporary from './slices/temporary'
+import questionSlice from './slices/questionSlice'
+
+const reducer = {
+  question: questionSlice,
+}
 
 export const store = configureStore({
-  reducer: {
-    temporary,
-  },
+  reducer,
 })

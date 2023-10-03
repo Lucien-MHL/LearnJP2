@@ -1,11 +1,18 @@
+import { useTranslation } from 'react-i18next'
+import { useSelector } from 'react-redux'
 import { S } from './styles'
 import { Home } from '../../../assets/icons'
-import { useTranslation } from 'react-i18next'
 import { useDevice } from '../../../hooks'
+import { selectById } from '../../../redux/slices/questionSlice'
+import Option from './Option'
 
 export default function MobileView() {
   const { t } = useTranslation()
   const device = useDevice()
+  const current = useSelector(state => selectById(state, 'current'))
+  const count = useSelector(state => selectById(state, 'count'))
+  const total = useSelector(state => selectById(state, 'total'))
+  const opts = useSelector(state => selectById(state, 'opts'))
 
   return (
     <>
@@ -21,17 +28,14 @@ export default function MobileView() {
             <Home />
           </S.HomeIcon>
           <S.QuestionSection>
-            <S.Subject>ツ</S.Subject>
-            <S.Count>1/46</S.Count>
+            <S.Subject>{current.word}</S.Subject>
+            <S.Count>{`${count}/${total}`}</S.Count>
           </S.QuestionSection>
           <S.AnswerSection>
             <S.Options $content={t('chose_answer')}>
-              <S.Item>shi</S.Item>
-              <S.Item>wa</S.Item>
-              <S.Item>se</S.Item>
-              <S.Item>o</S.Item>
-              <S.Item>tsu</S.Item>
-              <S.Item>fu</S.Item>
+              {opts.map(i => (
+                <Option key={i.id} sound={i.sound} current={current} />
+              ))}
             </S.Options>
           </S.AnswerSection>
         </S.Container>
