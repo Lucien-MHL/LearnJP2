@@ -70,7 +70,7 @@ export const S = {
     &::before {
       content: ${({ $content }) => `'${$content}'`};
       position: absolute;
-      width: 180px;
+      width: ${({ $result }) => ($result ? '45px' : '180px')};
       text-align: center;
       top: 0;
       left: 0;
@@ -79,12 +79,5 @@ export const S = {
       translate: 0 -50%;
       background: ${({ theme }) => theme.pickled_blue_wood};
     }
-  `,
-  Item: styled.p`
-    font-size: 1.5rem;
-    text-align: center;
-    padding: 0.75rem;
-    margin: 0.5rem;
-    width: 60px;
   `,
 }
