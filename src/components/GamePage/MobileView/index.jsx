@@ -42,7 +42,7 @@ export default function MobileView() {
               $result={showResult}
             >
               {showResult ? (
-                <AnswerResult />
+                <AnswerResult id={current.id} />
               ) : (
                 <>
                   {opts.map(i => (
