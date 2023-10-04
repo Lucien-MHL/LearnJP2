@@ -37,6 +37,6 @@ export const Palette = {
   white: '#ffffff',
   green: '#77f779',
   red: '#f52727',
-  dark_green: '#073400',
+  dark_green: '#062D09',
   brown: '#6D4200',
 }

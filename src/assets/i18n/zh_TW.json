@@ -17,10 +17,11 @@
   },
   "result": "結果",
   "next_subject": {
+    "web": "按 空白鍵 以繼續",
     "mobile": "點我至下一題"
   },
   "comparison": {
-    "user": "你的: {{u}}",
+    "user": "回答: {{u}}",
     "truly": "正確答案: {{t}}"
   }
 }
