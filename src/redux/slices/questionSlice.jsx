@@ -11,8 +11,8 @@ const getRandomOpts = (data, specify) => {
   const shuffled = arr
     .filter(e => e.id !== specify.id)
     .slice(0, 5)
-    .map(e => e)
-  shuffled.splice(randomNumber(6), 0, specify)
+    .map(e => ({ id: e.id, sound: e.sound }))
+  shuffled.splice(randomNumber(6), 0, { id: specify.id, sound: specify.sound })
   return shuffled
 }
 

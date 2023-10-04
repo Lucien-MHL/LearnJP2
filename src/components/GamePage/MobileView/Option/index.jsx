@@ -2,7 +2,6 @@ import { useRef } from 'react'
 import PropType from 'prop-types'
 import { useDispatch } from 'react-redux'
 import { S } from './styles'
-// import { nextSubject } from '../../../../redux/slices/questionSlice'
 import { checkAnswer } from '../../../../redux/slices/answerSlice'
 
 export default function Option(props) {
@@ -12,13 +11,7 @@ export default function Option(props) {
     const { sound } = props.current
     const v = value.current.innerText
     if (v) {
-      dispatch(checkAnswer(v === sound))
-
-      /** TODO:
-       *    目前暫且先已能順利顯示結果為主。
-       *    在撰寫前往下一題邏輯時再做更改。
-       */
-      // dispatch(nextSubject(props.current.id))
+      dispatch(checkAnswer({ user: v, truly: sound }))
     }
   }
 

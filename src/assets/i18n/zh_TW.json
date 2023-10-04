@@ -15,5 +15,12 @@
     "correct": "回答正確",
     "wrong": "回答錯誤"
   },
-  "result": "結果"
+  "result": "結果",
+  "next_subject": {
+    "mobile": "點我至下一題"
+  },
+  "comparison": {
+    "user": "你的: {{u}}",
+    "truly": "正確答案: {{t}}"
+  }
 }

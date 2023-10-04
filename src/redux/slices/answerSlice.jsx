@@ -9,17 +9,25 @@ export const answerSlice = createSlice({
   initialState,
   reducers: {
     checkAnswer: (state, { payload }) => {
+      const { user, truly } = payload
+      const r = user === truly
       state.answer = {
-        result: payload,
-        color: payload ? 'green' : 'red',
-        text: payload ? 'correct' : 'wrong',
+        result: r,
+        color: r ? 'green' : 'red',
+        text: r ? 'correct' : 'wrong',
+        user,
+        truly,
       }
       state.showResult = true
+    },
+    closeAnswerResult: state => {
+      state.answer = {}
+      state.showResult = false
     },
   },
 })
 
 export const selectById = (state, id) => state.answer[id]
 
-export const { checkAnswer } = answerSlice.actions
+export const { checkAnswer, closeAnswerResult } = answerSlice.actions
 export default answerSlice.reducer
