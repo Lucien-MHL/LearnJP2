@@ -1,23 +1,28 @@
-import { S } from './styles'
+import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector, useDispatch } from 'react-redux'
+import { S } from './styles'
 import { Home } from '../../../assets/icons'
 import { useDevice } from '../../../hooks'
-import { selectById, nextSubject } from '../../../redux/slices/questionSlice'
-import { useState } from 'react'
+import * as q from '../../../redux/slices/questionSlice'
+import * as a from '../../../redux/slices/answerSlice'
+import AnswerResult from './AnswerResult'
 
 export default function WebView() {
-  const [value, setValue] = useState('')
   const { t } = useTranslation()
   const device = useDevice()
   const dispatch = useDispatch()
-  const current = useSelector(state => selectById(state, 'current'))
-  const total = useSelector(state => selectById(state, 'total'))
-  const count = useSelector(state => selectById(state, 'count'))
+  const current = useSelector(state => q.selectById(state, 'current'))
+  const total = useSelector(state => q.selectById(state, 'total'))
+  const count = useSelector(state => q.selectById(state, 'count'))
+  const showResult = useSelector(state => a.selectById(state, 'showResult'))
+  const [value, setValue] = useState('')
   const onSubmit = e => {
     e.preventDefault()
     if (e.target[0].value) {
-      dispatch(nextSubject(current.id))
+      const v = e.target[0].value
+      const payload = { user: v, truly: current.sound }
+      dispatch(a.checkAnswer(payload))
       setValue('')
     } else return
   }
@@ -48,13 +53,17 @@ export default function WebView() {
                 <S.Current>{t('current', { current: count })}</S.Current>
                 <S.Total>{t('total', { total: total })} </S.Total>
               </S.NumberOfQuestion>
-              <S.Input
-                type='text'
-                placeholder={t('input_answer')}
-                maxLength={3}
-                onChange={onChange}
-                value={value}
-              />
+              {showResult ? (
+                <AnswerResult />
+              ) : (
+                <S.Input
+                  type='text'
+                  placeholder={t('input_answer')}
+                  maxLength={3}
+                  onChange={onChange}
+                  value={value}
+                />
+              )}
             </S.Blackboard>
           </S.InputSection>
         </S.Container>
