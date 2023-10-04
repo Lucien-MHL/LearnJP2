@@ -1,4 +1,4 @@
-import{s as o,L as m,r as g,u as j,a as s,b as a,j as t,n as w}from"./index-7224650a.js";import{u as k,H as y}from"./Home-389f7f6d.js";import{u as $}from"./useTranslation-2c026d3b.js";const r={Container:o.div`
+import{s as o,L as m,r as g,u as j,a as s,b as a,j as t,n as w}from"./index-7402b431.js";import{u as k,H as y}from"./Wrong-0a72b15a.js";import{u as $}from"./useTranslation-323a519d.js";const r={Container:o.div`
     width: 1000px;
     height: 95%;
     margin: auto;
