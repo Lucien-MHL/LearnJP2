@@ -10,16 +10,18 @@ export const S = {
     height: 100%;
     position: relative;
   `,
-  ResultSection: styled.section``,
-  Text: styled.p`
+  ResultSection: styled.section`
     display: flex;
     align-items: center;
-    font-size: 3rem;
-    letter-spacing: 10px;
     color: ${({ $color }) => $color};
   `,
   PreFix: styled.p`
     font-size: 7rem;
+  `,
+  Text: styled.p`
+    display: flex;
+    font-size: 3rem;
+    letter-spacing: 10px;
   `,
   Comparison: styled.section`
     display: flex;

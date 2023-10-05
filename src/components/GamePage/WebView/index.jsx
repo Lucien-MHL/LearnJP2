@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector, useDispatch } from 'react-redux'
 import { S } from './styles'
@@ -7,6 +7,7 @@ import { useDevice } from '../../../hooks'
 import * as q from '../../../redux/slices/questionSlice'
 import * as a from '../../../redux/slices/answerSlice'
 import AnswerResult from './AnswerResult'
+import Input from './Input'
 
 export default function WebView() {
   const { t } = useTranslation()
@@ -16,19 +17,14 @@ export default function WebView() {
   const total = useSelector(state => q.selectById(state, 'total'))
   const count = useSelector(state => q.selectById(state, 'count'))
   const showResult = useSelector(state => a.selectById(state, 'showResult'))
-  const [value, setValue] = useState('')
+  const value = useRef()
   const onSubmit = e => {
     e.preventDefault()
-    if (e.target[0].value) {
-      const v = e.target[0].value
+    const v = value.current[0].value
+    if (v) {
       const payload = { user: v, truly: current.sound }
       dispatch(a.checkAnswer(payload))
-      setValue('')
     } else return
-  }
-  const onChange = e => {
-    const v = e.target.value
-    setValue(v.replace(/[^a-z]/, ''))
   }
 
   return (
@@ -47,23 +43,13 @@ export default function WebView() {
           <S.QuestionSection>
             <S.Subject>{current.word}</S.Subject>
           </S.QuestionSection>
-          <S.InputSection onSubmit={onSubmit}>
+          <S.InputSection onSubmit={onSubmit} ref={value}>
             <S.Blackboard>
               <S.NumberOfQuestion>
                 <S.Current>{t('current', { current: count })}</S.Current>
                 <S.Total>{t('total', { total: total })} </S.Total>
               </S.NumberOfQuestion>
-              {showResult ? (
-                <AnswerResult />
-              ) : (
-                <S.Input
-                  type='text'
-                  placeholder={t('input_answer')}
-                  maxLength={3}
-                  onChange={onChange}
-                  value={value}
-                />
-              )}
+              {showResult ? <AnswerResult id={current.id} /> : <Input />}
             </S.Blackboard>
           </S.InputSection>
         </S.Container>
