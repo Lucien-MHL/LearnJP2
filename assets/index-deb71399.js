@@ -1,4 +1,4 @@
-import{s as n,L as k,u as a,a as d,j as t,b as $,c as l,r as v,e as S}from"./index-73425515.js";import{u as z,H as C}from"./Wrong-747f1bbf.js";import{u as h}from"./useTranslation-5f6b169d.js";const s={Container:n.div`
+import{s as n,L as v,u as p,a as b,r as x,j as t,c as $,n as S,b as z,e as d,f as C}from"./index-e78b85b7.js";import{u as j,P as T,H as I}from"./Wrong-4efe45c9.js";import{u as h}from"./useTranslation-9448f767.js";const i={Container:n.div`
     width: 1000px;
     height: 95%;
     margin: auto;
@@ -11,7 +11,7 @@ import{s as n,L as k,u as a,a as d,j as t,b as $,c as l,r as v,e as S}from"./ind
     border: 1px solid ${({theme:e})=>e.white+"aa"};
     position: relative;
     user-select: none;
-  `,HomeIcon:n(k)`
+  `,HomeIcon:n(v)`
     display: block;
     position: absolute;
     z-index: 1;
@@ -84,16 +84,7 @@ import{s as n,L as k,u as a,a as d,j as t,b as $,c as l,r as v,e as S}from"./ind
     font-size: 2rem;
   `,Total:n.p`
     font-size: 2rem;
-  `,Input:n.input`
-    appearance: none;
-    border: none;
-    outline: none;
-    background-color: transparent;
-    width: 100%;
-    height: 100%;
-    font-size: 5rem;
-    text-align: center;
-  `},i={Container:n.main`
+  `},a={Container:n.main`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -101,14 +92,16 @@ import{s as n,L as k,u as a,a as d,j as t,b as $,c as l,r as v,e as S}from"./ind
     width: 100%;
     height: 100%;
     position: relative;
-  `,ResultSection:n.section``,Text:n.p`
+  `,ResultSection:n.section`
     display: flex;
     align-items: center;
-    font-size: 3rem;
-    letter-spacing: 10px;
     color: ${({$color:e})=>e};
   `,PreFix:n.p`
     font-size: 7rem;
+  `,Text:n.p`
+    display: flex;
+    font-size: 3rem;
+    letter-spacing: 10px;
   `,Comparison:n.section`
     display: flex;
     width: 80%;
@@ -125,4 +118,13 @@ import{s as n,L as k,u as a,a as d,j as t,b as $,c as l,r as v,e as S}from"./ind
     text-align: center;
     font-size: 1.5rem;
     font-family: BIZUDPMincho, sans-serif;
-  `};function T(){const{t:e}=h(),r=a(c=>d(c,"answer"));return t.jsxs(i.Container,{children:[t.jsx(i.ResultSection,{children:t.jsxs(i.Text,{$color:r.color,children:[t.jsx(i.PreFix,{children:r.result?"O":"X"}),e(`answer.${r.text}`)]})}),!r.result&&t.jsxs(i.Comparison,{children:[t.jsx(i.Txt,{children:e("comparison.user",{u:r.user})}),t.jsx(i.Txt,{children:e("comparison.truly",{t:r.truly})})]}),t.jsx(i.PressToNext,{children:e("next_subject.web")})]})}function B(){const{t:e}=h(),r=$(),c=z(),p=a(o=>l(o,"current")),f=a(o=>l(o,"total")),m=a(o=>l(o,"count")),b=a(o=>d(o,"showResult")),[g,u]=v.useState(""),j=o=>{if(o.preventDefault(),o.target[0].value){const y={user:o.target[0].value,truly:p.sound};c(S(y)),u("")}else return},w=o=>{const x=o.target.value;u(x.replace(/[^a-z]/,""))};return t.jsx(t.Fragment,{children:r.isResize()?t.jsx("h1",{children:"請改回正確的裝置大小"}):t.jsxs(s.Container,{children:[t.jsx(s.HomeIcon,{to:"/",children:t.jsx(C,{size:"100%"})}),t.jsx(s.QuestionSection,{children:t.jsx(s.Subject,{children:p.word})}),t.jsx(s.InputSection,{onSubmit:j,children:t.jsxs(s.Blackboard,{children:[t.jsxs(s.NumberOfQuestion,{children:[t.jsx(s.Current,{children:e("current",{current:m})}),t.jsxs(s.Total,{children:[e("total",{total:f})," "]})]}),b?t.jsx(T,{}):t.jsx(s.Input,{type:"text",placeholder:e("input_answer"),maxLength:3,onChange:w,value:g})]})})]})})}export{B as default};
+  `};function g({id:e}){const{t:c}=h(),u=j(),o=p(l=>b(l,"answer")),s={key:"keydown",func:l=>{if(l.code==="Space"){u($()),u(S(e));return}}};return x.useEffect(()=>(document.addEventListener(s.key,s.func),()=>document.removeEventListener(s.key,s.func)),[s.func,s.key]),t.jsxs(a.Container,{children:[t.jsxs(a.ResultSection,{$color:o.color,children:[t.jsx(a.PreFix,{children:o.result?"O":"X"}),t.jsx(a.Text,{children:c(`answer.${o.text}`)})]}),!o.result&&t.jsxs(a.Comparison,{children:[t.jsx(a.Txt,{children:c("comparison.user",{u:o.user})}),t.jsx(a.Txt,{children:c("comparison.truly",{t:o.truly})})]}),t.jsx(a.PressToNext,{children:c("next_subject.web")})]})}g.propTypes={id:T.string};const R={Input:n.input`
+    appearance: none;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    font-size: 5rem;
+    text-align: center;
+  `};function P(){const{t:e}=h(),[c,u]=x.useState(""),o=s=>{const l=s.target.value;u(l.replace(/[^a-z]/,""))};return t.jsx(R.Input,{type:"text",placeholder:e("input_answer"),maxLength:3,onChange:o,value:c,autoFocus:!0})}function L(){const{t:e}=h(),c=z(),u=j(),o=p(r=>d(r,"current")),s=p(r=>d(r,"total")),l=p(r=>d(r,"count")),w=p(r=>b(r,"showResult")),f=x.useRef(),y=r=>{r.preventDefault();const m=f.current[0].value;if(m){const k={user:m,truly:o.sound};u(C(k))}else return};return t.jsx(t.Fragment,{children:c.isResize()?t.jsx("h1",{children:"請改回正確的裝置大小"}):t.jsxs(i.Container,{children:[t.jsx(i.HomeIcon,{to:"/",children:t.jsx(I,{size:"100%"})}),t.jsx(i.QuestionSection,{children:t.jsx(i.Subject,{children:o.word})}),t.jsx(i.InputSection,{onSubmit:y,ref:f,children:t.jsxs(i.Blackboard,{children:[t.jsxs(i.NumberOfQuestion,{children:[t.jsx(i.Current,{children:e("current",{current:l})}),t.jsxs(i.Total,{children:[e("total",{total:s})," "]})]}),w?t.jsx(g,{id:o.id}):t.jsx(P,{})]})})]})})}export{L as default};
