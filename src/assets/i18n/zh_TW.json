@@ -23,5 +23,12 @@
   "comparison": {
     "user": "回答: {{u}}",
     "truly": "正確答案: {{t}}"
-  }
+  },
+  "finish": {
+    "well_done": "恭喜完成",
+    "keep_going": "可惜",
+    "all_fail": "殘念"
+  },
+  "back_to_home": "回首頁",
+  "retry": "再挑戰一次"
 }

@@ -34,12 +34,16 @@ export const questionSlice = createSlice({
       const removeSameId = (arr, id) => arr.filter(i => i !== id)
       const { list, data, s } = state
       const newList = removeSameId(list, payload)
-      const newId = newList[randomNumber(newList)]
-      const current = data.find(e => e.id === newId)
-      const ns = [...s, newId]
-      const count = ns.length
-      const opts = getRandomOpts(data, current)
-      return { ...state, list: newList, current, count, s: ns, opts }
+      if (newList.length) {
+        const newId = newList[randomNumber(newList)]
+        const current = data.find(e => e.id === newId)
+        const ns = [...s, newId]
+        const count = ns.length
+        const opts = getRandomOpts(data, current)
+        return { ...state, list: newList, current, count, s: ns, opts }
+      } else {
+        return { ...state, list: newList }
+      }
     },
   },
 })
