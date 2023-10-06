@@ -1,8 +1,10 @@
 import { useTranslation } from 'react-i18next'
 import { useTheme } from 'styled-components'
+import { useParams } from 'react-router-dom'
 import { S } from './styles'
 
 export default function Finish() {
+  const { category } = useParams()
   const { t } = useTranslation()
   const { red, green } = useTheme()
   /** TODO:
@@ -32,8 +34,8 @@ export default function Finish() {
         ))}
       </S.FailingDisplay>
       <S.LinkGroup>
-        <S.link>{t('back_to_home')}</S.link>
-        <S.link>{t('retry')}</S.link>
+        <S.link to='/'>{t('back_to_home')}</S.link>
+        <S.link to={`/${category}`}>{t('retry')}</S.link>
       </S.LinkGroup>
     </>
   )

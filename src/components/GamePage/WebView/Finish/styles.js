@@ -86,6 +86,10 @@ export const S = {
       font-size: 44px;
     }
 
+    &:nth-child(2) {
+      font-size: 32px;
+    }
+
     &::after {
       content: '';
       width: 100%;

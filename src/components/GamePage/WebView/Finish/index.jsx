@@ -9,17 +9,22 @@ export default function Finish() {
   const { t } = useTranslation()
   const { red, green } = useTheme()
   const { category } = useParams()
-  /** TODO:
-   *    為了檢測畫面是否可行，所以只先回傳字串，
-   *    等撰寫邏輯時，再把回傳值做更改。
-   */
   const linkList = useMemo(() => {
     const getOthers = Object.keys(data).filter(i => i !== category)
-    const context = [
-      t('back_to_home'),
-      ...getOthers.map(i => t('go_challenge', { name: t(i) })),
+    const preSet = [
+      { name: t('back_to_home'), link: '/' },
+      { name: t('retry'), link: `/${category}` },
     ]
-    return context
+    const list = getOthers.map(i => ({
+      name: t('go_challenge', { name: t(i) }),
+      link: `/${i}`,
+    }))
+    return list.reduce(
+      (arr, c) => {
+        return [...arr, c]
+      },
+      [...preSet]
+    )
   }, [category, t])
   /** TODO:
    *    暫時的假資料，用以測試畫面。
@@ -48,8 +53,10 @@ export default function Finish() {
         ))}
       </S.FailingDisplay>
       <S.LinkGroup>
-        {linkList.map(e => (
-          <S.link key={e}>{e}</S.link>
+        {linkList.map((e, i) => (
+          <S.link key={i} to={e.link}>
+            {e.name}
+          </S.link>
         ))}
       </S.LinkGroup>
     </>
