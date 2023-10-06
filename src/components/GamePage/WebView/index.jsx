@@ -39,6 +39,13 @@ export default function WebView() {
         <h1>請改回正確的裝置大小</h1>
       ) : (
         <S.Container>
+          {/* TODO:
+              目前暫時以題目都完成後顯示結束頁面為主。
+              但之後會需要調整為:
+              1. 五題錯誤即結束遊戲。
+              2. 都答對才結束遊戲。
+              3. 都答對但錯誤不到五題。
+         */}
           {!list.length ? (
             <>
               <S.HomeIcon to='/'>
