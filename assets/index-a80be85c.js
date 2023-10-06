@@ -1,10 +1,10 @@
-import{s as n,L as j,r as S,j as t,g as T,J as w,u as x,a as b,n as C,c as R,b as v,e as z,f as m}from"./index-4118e82b.js";import{u as y,P as u,C as _,W as I,H as F}from"./Wrong-e1354be6.js";import{u as f}from"./useTranslation-dcd22c57.js";const p={Container:n.div`
+import{s as n,L as b,r as $,j as t,g as R,J as k,u as l,a as y,n as z,c as F,b as I,f as g,e as _}from"./index-d05cc825.js";import{u as S,P as f,C as H,W as A,H as L}from"./Wrong-a594620b.js";import{u as w}from"./useTranslation-390f462a.js";const u={Container:n.div`
     display: flex;
     flex-direction: column;
     width: 100%;
     height: 100%;
     margin: auto;
-  `,HomeIcon:n(j)`
+  `,HomeIcon:n(b)`
     position: absolute;
     top: 16px;
     left: 16px;
@@ -74,7 +74,7 @@ import{s as n,L as j,r as S,j as t,g as T,J as w,u as x,a as b,n as C,c as R,b a
     padding: 0.75rem;
     margin: 0.5rem;
     width: 60px;
-  `};function $(e){const o=S.useRef(),a=y(),c=()=>{const{sound:i}=e.current,r=o.current.innerText;r&&a(T({user:r,truly:i}))};return t.jsx(O.Option,{ref:o,onClick:c,children:e.sound})}$.propTypes={sound:u.string,current:u.shape({sound:u.string,word:u.string,id:u.string})};const d={Container:n.main`
+  `};function T(e){const r=$.useRef(),a=S(),c=()=>{const o=r.current.innerText;o&&a(R({user:o,truly:e.current.sound,id:e.current.id}))};return t.jsx(O.Option,{ref:r,onClick:c,children:e.sound})}T.propTypes={sound:f.string,current:f.shape({sound:f.string,word:f.string,id:f.string})};const p={Container:n.main`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -114,7 +114,7 @@ import{s as n,L as j,r as S,j as t,g as T,J as w,u as x,a as b,n as C,c as R,b a
     text-align: center;
     width: 100%;
     padding: 10px;
-  `};function k(e){const{t:o}=f(),a=y(),c=w(),i=x(h=>b(h,"answer")),r="100%",g=()=>{a(C(e.id)),a(R())};return t.jsxs(d.Container,{children:[t.jsxs(d.ResultSection,{children:[t.jsx(d.Icon,{children:i.result?t.jsx(_,{color:c[i.color],size:r}):t.jsx(I,{color:c[i.color],size:r})}),t.jsx(d.ResultText,{$color:c[i.color],children:o(`answer.${i.text}`)})]}),!i.result&&t.jsxs(d.Comparison,{children:[t.jsx(d.Text,{$color:c.red,children:o("comparison.user",{u:i.user})}),t.jsx(d.Text,{$color:c.green,children:o("comparison.truly",{t:i.truly})})]}),t.jsx(d.ToNextSubject,{onClick:g,children:o("next_subject.mobile")})]})}k.propTypes={id:u.string};const l={Header:n.header`
+  `};function v(e){const{t:r}=w(),a=S(),c=k(),o=l(x=>y(x,"answer")),h="100%",m=()=>{a(z(e.id)),a(F())};return t.jsxs(p.Container,{children:[t.jsxs(p.ResultSection,{children:[t.jsx(p.Icon,{children:o.result?t.jsx(H,{color:c[o.color],size:h}):t.jsx(A,{color:c[o.color],size:h})}),t.jsx(p.ResultText,{$color:c[o.color],children:r(`answer.${o.text}`)})]}),!o.result&&t.jsxs(p.Comparison,{children:[t.jsx(p.Text,{$color:c.red,children:r("comparison.user",{u:o.user})}),t.jsx(p.Text,{$color:c.green,children:r("comparison.truly",{t:o.truly})})]}),t.jsx(p.ToNextSubject,{onClick:m,children:r("next_subject.mobile")})]})}v.propTypes={id:f.string};const d={Header:n.header`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -142,7 +142,7 @@ import{s as n,L as j,r as S,j as t,g as T,J as w,u as x,a as b,n as C,c as R,b a
     width: 33%;
     text-align: center;
     font-size: 1.25rem;
-    color: ${({$color:e,theme:o})=>e||o.mercury};
+    color: ${({$color:e,theme:r})=>e||r.mercury};
 
     &:nth-child(1) {
       font-size: 1.75rem;
@@ -152,13 +152,9 @@ import{s as n,L as j,r as S,j as t,g as T,J as w,u as x,a as b,n as C,c as R,b a
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* TODO: 
-         如果有錯誤的題目，則 margin-top 為 85px，
-         其餘則為 auto。
-     */
     margin-top: auto;
     height: 35%;
-  `,link:n(j)`
+  `,link:n(b)`
     text-decoration: none;
     color: ${({theme:e})=>e.mercury};
     border: 1px solid ${({theme:e})=>e.mercury};
@@ -166,4 +162,4 @@ import{s as n,L as j,r as S,j as t,g as T,J as w,u as x,a as b,n as C,c as R,b a
     padding: 15px;
     margin: 15px;
     font-size: 24px;
-  `};function A(){const{category:e}=v(),{t:o}=f(),{red:a,green:c}=w(),i=[{fail:"aws",word:"ア",sound:"a",id:"1dc2c4d690ee8bdf"},{fail:"aws",word:"イ",sound:"i",id:"60489b5f9cb0ee19"},{fail:"aws",word:"ウ",sound:"u",id:"c558111f32794060"},{fail:"aws",word:"エ",sound:"e",id:"fdbe0e8dadf9b900"},{fail:"aws",word:"オ",sound:"o",id:"b3bd5993aaf52bba"}];return t.jsxs(t.Fragment,{children:[t.jsx(l.Header,{children:t.jsx(l.Title,{children:o("finish.all_fail")})}),t.jsx(l.FailingDisplay,{children:i.map(r=>t.jsxs(l.Row,{children:[t.jsx(l.Item,{children:r.word}),t.jsx(l.Item,{$color:c,children:r.sound}),t.jsx(l.Item,{$color:a,children:r.fail})]},r.id))}),t.jsxs(l.LinkGroup,{children:[t.jsx(l.link,{to:"/",children:o("back_to_home")}),t.jsx(l.link,{to:`/${e}`,children:o("retry")})]})]})}function L(){const{t:e}=f(),o=z(),a=x(s=>m(s,"current")),c=x(s=>m(s,"count")),i=x(s=>m(s,"total")),r=x(s=>m(s,"opts")),g=x(s=>m(s,"list")),h=x(s=>b(s,"showResult"));return t.jsx(t.Fragment,{children:o.isResize()?t.jsx("h1",{children:"請改回正確的裝置大小"}):t.jsx(p.Container,{children:g.length?t.jsx(A,{}):t.jsxs(t.Fragment,{children:[t.jsx(p.HomeIcon,{to:"/",children:t.jsx(F,{})}),t.jsxs(p.QuestionSection,{children:[t.jsx(p.Subject,{children:a.word}),t.jsx(p.Count,{children:`${c}/${i}`})]}),t.jsx(p.AnswerSection,{children:t.jsx(p.Options,{$content:e(h?"result":"chose_answer"),$result:h,children:h?t.jsx(k,{id:a.id}):t.jsx(t.Fragment,{children:r.map(s=>t.jsx($,{sound:s.sound,current:a},s.id))})})})]})})})}export{L as default};
+  `};function D(){const{category:e}=I(),{t:r}=w(),{red:a,green:c}=k(),o=l(s=>y(s,"log")),h=l(s=>y(s,"finishTitle")),m=l(s=>g(s,"data")),x=o.length,j=x&&o.map(s=>{const i=m.find(C=>C.id===s.id);return{word:i.word,sound:i.sound,fail:s.user,id:s.id}});return t.jsxs(t.Fragment,{children:[t.jsx(d.Header,{children:t.jsx(d.Title,{children:r(`finish.${h}`)})}),x?t.jsx(d.FailingDisplay,{children:j.map(s=>t.jsxs(d.Row,{children:[t.jsx(d.Item,{children:s.word}),t.jsx(d.Item,{$color:c,children:s.sound}),t.jsx(d.Item,{$color:a,children:s.fail})]},s.id))}):null,t.jsxs(d.LinkGroup,{children:[t.jsx(d.link,{to:"/",children:r("back_to_home")}),t.jsx(d.link,{to:`/${e}`,children:r("retry")})]})]})}function G(){const{t:e}=w(),r=_(),a=l(i=>g(i,"current")),c=l(i=>g(i,"count")),o=l(i=>g(i,"total")),h=l(i=>g(i,"opts")),m=l(i=>g(i,"list")),x=l(i=>y(i,"shouldFinish")),j=l(i=>y(i,"showResult")),s=$.useMemo(()=>x?!1:!!m.length,[x,m.length]);return t.jsx(t.Fragment,{children:r.isResize()?t.jsx("h1",{children:"請改回正確的裝置大小"}):t.jsx(u.Container,{children:s?t.jsxs(t.Fragment,{children:[t.jsx(u.HomeIcon,{to:"/",children:t.jsx(L,{})}),t.jsxs(u.QuestionSection,{children:[t.jsx(u.Subject,{children:a.word}),t.jsx(u.Count,{children:`${c}/${o}`})]}),t.jsx(u.AnswerSection,{children:t.jsx(u.Options,{$content:e(j?"result":"chose_answer"),$result:j,children:j?t.jsx(v,{id:a.id}):t.jsx(t.Fragment,{children:h.map(i=>t.jsx(T,{sound:i.sound,current:a},i.id))})})})]}):t.jsx(D,{})})})}export{G as default};
