@@ -45,10 +45,6 @@ export const S = {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* TODO: 
-         如果有錯誤的題目，則 margin-top 為 85px，
-         其餘則為 auto。
-     */
     margin-top: auto;
     height: 35%;
   `,

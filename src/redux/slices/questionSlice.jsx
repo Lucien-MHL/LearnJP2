@@ -27,7 +27,7 @@ export const questionSlice = createSlice({
       const total = payload.length
       const s = []
       const count = s.push(current.id)
-      const opts = getRandomOpts(data, current)
+      const opts = getRandomOpts(payload, current)
       return { ...state, list, current, total, data, count, s, opts }
     },
     nextSubject: (state, { payload }) => {

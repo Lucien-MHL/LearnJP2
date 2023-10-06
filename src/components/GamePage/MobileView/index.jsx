@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
+import { useMemo } from 'react'
 import { S } from './styles'
 import { Home } from '../../../assets/icons'
 import { useDevice } from '../../../hooks'
@@ -17,9 +18,16 @@ export default function MobileView() {
   const total = useSelector(state => question.selectById(state, 'total'))
   const opts = useSelector(state => question.selectById(state, 'opts'))
   const list = useSelector(state => question.selectById(state, 'list'))
+  const shouldFinish = useSelector(state =>
+    answer.selectById(state, 'shouldFinish')
+  )
   const showResult = useSelector(state =>
     answer.selectById(state, 'showResult')
   )
+
+  const isFinish = useMemo(() => {
+    return shouldFinish ? false : list.length ? true : false
+  }, [shouldFinish, list.length])
 
   return (
     <>
@@ -38,7 +46,7 @@ export default function MobileView() {
                 2. 都答對才結束遊戲。
                 3. 都答對但錯誤不到五題。
            */}
-          {!list.length ? (
+          {isFinish ? (
             <>
               <S.HomeIcon to='/'>
                 <Home />
