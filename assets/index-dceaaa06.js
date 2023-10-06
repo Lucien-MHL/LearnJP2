@@ -1,4 +1,4 @@
-import{s as n,L as j,r as S,j as t,f as C,J as w,u as x,a as b,n as T,c as R,b as v,e as m}from"./index-e9710076.js";import{u as y,P as u,C as z,W as _,H as I}from"./Wrong-7ebfbad4.js";import{u as g}from"./useTranslation-6860f6a3.js";const p={Container:n.div`
+import{s as n,L as j,r as S,j as t,g as T,J as w,u as x,a as b,n as C,c as R,e as v,f as m}from"./index-517138ac.js";import{u as y,P as u,C as z,W as _,H as I}from"./Wrong-eed27708.js";import{u as f}from"./useTranslation-35c2144e.js";const p={Container:n.div`
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -74,7 +74,7 @@ import{s as n,L as j,r as S,j as t,f as C,J as w,u as x,a as b,n as T,c as R,b a
     padding: 0.75rem;
     margin: 0.5rem;
     width: 60px;
-  `};function $(e){const s=S.useRef(),c=y(),r=()=>{const{sound:i}=e.current,d=s.current.innerText;d&&c(C({user:d,truly:i}))};return t.jsx(F.Option,{ref:s,onClick:r,children:e.sound})}$.propTypes={sound:u.string,current:u.shape({sound:u.string,word:u.string,id:u.string})};const a={Container:n.main`
+  `};function $(e){const s=S.useRef(),c=y(),r=()=>{const{sound:o}=e.current,d=s.current.innerText;d&&c(T({user:d,truly:o}))};return t.jsx(F.Option,{ref:s,onClick:r,children:e.sound})}$.propTypes={sound:u.string,current:u.shape({sound:u.string,word:u.string,id:u.string})};const a={Container:n.main`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -114,7 +114,7 @@ import{s as n,L as j,r as S,j as t,f as C,J as w,u as x,a as b,n as T,c as R,b a
     text-align: center;
     width: 100%;
     padding: 10px;
-  `};function k(e){const{t:s}=g(),c=y(),r=w(),i=x(h=>b(h,"answer")),d="100%",f=()=>{c(T(e.id)),c(R())};return t.jsxs(a.Container,{children:[t.jsxs(a.ResultSection,{children:[t.jsx(a.Icon,{children:i.result?t.jsx(z,{color:r[i.color],size:d}):t.jsx(_,{color:r[i.color],size:d})}),t.jsx(a.ResultText,{$color:r[i.color],children:s(`answer.${i.text}`)})]}),!i.result&&t.jsxs(a.Comparison,{children:[t.jsx(a.Text,{$color:r.red,children:s("comparison.user",{u:i.user})}),t.jsx(a.Text,{$color:r.green,children:s("comparison.truly",{t:i.truly})})]}),t.jsx(a.ToNextSubject,{onClick:f,children:s("next_subject.mobile")})]})}k.propTypes={id:u.string};const l={Header:n.header`
+  `};function k(e){const{t:s}=f(),c=y(),r=w(),o=x(h=>b(h,"answer")),d="100%",g=()=>{c(C(e.id)),c(R())};return t.jsxs(a.Container,{children:[t.jsxs(a.ResultSection,{children:[t.jsx(a.Icon,{children:o.result?t.jsx(z,{color:r[o.color],size:d}):t.jsx(_,{color:r[o.color],size:d})}),t.jsx(a.ResultText,{$color:r[o.color],children:s(`answer.${o.text}`)})]}),!o.result&&t.jsxs(a.Comparison,{children:[t.jsx(a.Text,{$color:r.red,children:s("comparison.user",{u:o.user})}),t.jsx(a.Text,{$color:r.green,children:s("comparison.truly",{t:o.truly})})]}),t.jsx(a.ToNextSubject,{onClick:g,children:s("next_subject.mobile")})]})}k.propTypes={id:u.string};const l={Header:n.header`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -152,6 +152,10 @@ import{s as n,L as j,r as S,j as t,f as C,J as w,u as x,a as b,n as T,c as R,b a
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    /* TODO: 
+         如果有錯誤的題目，則 margin-top 為 85px，
+         其餘則為 auto。
+     */
     margin-top: auto;
     height: 35%;
   `,link:n(j)`
@@ -162,4 +166,4 @@ import{s as n,L as j,r as S,j as t,f as C,J as w,u as x,a as b,n as T,c as R,b a
     padding: 15px;
     margin: 15px;
     font-size: 24px;
-  `};function A(){const{t:e}=g(),{red:s,green:c}=w(),r=[{fail:"aws",word:"ア",sound:"a",id:"1dc2c4d690ee8bdf"},{fail:"aws",word:"イ",sound:"i",id:"60489b5f9cb0ee19"},{fail:"aws",word:"ウ",sound:"u",id:"c558111f32794060"},{fail:"aws",word:"エ",sound:"e",id:"fdbe0e8dadf9b900"},{fail:"aws",word:"オ",sound:"o",id:"b3bd5993aaf52bba"}];return t.jsxs(t.Fragment,{children:[t.jsx(l.Header,{children:t.jsx(l.Title,{children:e("finish.all_fail")})}),t.jsx(l.FailingDisplay,{children:r.map(i=>t.jsxs(l.Row,{children:[t.jsx(l.Item,{children:i.word}),t.jsx(l.Item,{$color:c,children:i.sound}),t.jsx(l.Item,{$color:s,children:i.fail})]},i.id))}),t.jsxs(l.LinkGroup,{children:[t.jsx(l.link,{children:e("back_to_home")}),t.jsx(l.link,{children:e("retry")})]})]})}function E(){const{t:e}=g(),s=v(),c=x(o=>m(o,"current")),r=x(o=>m(o,"count")),i=x(o=>m(o,"total")),d=x(o=>m(o,"opts")),f=x(o=>m(o,"list")),h=x(o=>b(o,"showResult"));return t.jsx(t.Fragment,{children:s.isResize()?t.jsx("h1",{children:"請改回正確的裝置大小"}):t.jsx(p.Container,{children:f.length?t.jsx(A,{}):t.jsxs(t.Fragment,{children:[t.jsx(p.HomeIcon,{to:"/",children:t.jsx(I,{})}),t.jsxs(p.QuestionSection,{children:[t.jsx(p.Subject,{children:c.word}),t.jsx(p.Count,{children:`${r}/${i}`})]}),t.jsx(p.AnswerSection,{children:t.jsx(p.Options,{$content:e(h?"result":"chose_answer"),$result:h,children:h?t.jsx(k,{id:c.id}):t.jsx(t.Fragment,{children:d.map(o=>t.jsx($,{sound:o.sound,current:c},o.id))})})})]})})})}export{E as default};
+  `};function O(){const{t:e}=f(),{red:s,green:c}=w(),r=[{fail:"aws",word:"ア",sound:"a",id:"1dc2c4d690ee8bdf"},{fail:"aws",word:"イ",sound:"i",id:"60489b5f9cb0ee19"},{fail:"aws",word:"ウ",sound:"u",id:"c558111f32794060"},{fail:"aws",word:"エ",sound:"e",id:"fdbe0e8dadf9b900"},{fail:"aws",word:"オ",sound:"o",id:"b3bd5993aaf52bba"}];return t.jsxs(t.Fragment,{children:[t.jsx(l.Header,{children:t.jsx(l.Title,{children:e("finish.all_fail")})}),t.jsx(l.FailingDisplay,{children:r.map(o=>t.jsxs(l.Row,{children:[t.jsx(l.Item,{children:o.word}),t.jsx(l.Item,{$color:c,children:o.sound}),t.jsx(l.Item,{$color:s,children:o.fail})]},o.id))}),t.jsxs(l.LinkGroup,{children:[t.jsx(l.link,{children:e("back_to_home")}),t.jsx(l.link,{children:e("retry")})]})]})}function E(){const{t:e}=f(),s=v(),c=x(i=>m(i,"current")),r=x(i=>m(i,"count")),o=x(i=>m(i,"total")),d=x(i=>m(i,"opts")),g=x(i=>m(i,"list")),h=x(i=>b(i,"showResult"));return t.jsx(t.Fragment,{children:s.isResize()?t.jsx("h1",{children:"請改回正確的裝置大小"}):t.jsx(p.Container,{children:g.length?t.jsx(O,{}):t.jsxs(t.Fragment,{children:[t.jsx(p.HomeIcon,{to:"/",children:t.jsx(I,{})}),t.jsxs(p.QuestionSection,{children:[t.jsx(p.Subject,{children:c.word}),t.jsx(p.Count,{children:`${r}/${o}`})]}),t.jsx(p.AnswerSection,{children:t.jsx(p.Options,{$content:e(h?"result":"chose_answer"),$result:h,children:h?t.jsx(k,{id:c.id}):t.jsx(t.Fragment,{children:d.map(i=>t.jsx($,{sound:i.sound,current:c},i.id))})})})]})})})}export{E as default};
