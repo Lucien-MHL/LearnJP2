@@ -30,5 +30,6 @@
     "all_fail": "殘念"
   },
   "back_to_home": "回首頁",
-  "retry": "再挑戰一次"
+  "retry": "再挑戰一次",
+  "go_challenge": "挑戰 {{name}}"
 }

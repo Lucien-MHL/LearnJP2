@@ -8,6 +8,7 @@ import * as q from '../../../redux/slices/questionSlice'
 import * as a from '../../../redux/slices/answerSlice'
 import AnswerResult from './AnswerResult'
 import Input from './Input'
+import Finish from './Finish'
 
 export default function WebView() {
   const { t } = useTranslation()
@@ -16,6 +17,7 @@ export default function WebView() {
   const current = useSelector(state => q.selectById(state, 'current'))
   const total = useSelector(state => q.selectById(state, 'total'))
   const count = useSelector(state => q.selectById(state, 'count'))
+  const list = useSelector(state => q.selectById(state, 'list'))
   const showResult = useSelector(state => a.selectById(state, 'showResult'))
   const value = useRef()
   const onSubmit = e => {
@@ -37,21 +39,27 @@ export default function WebView() {
         <h1>請改回正確的裝置大小</h1>
       ) : (
         <S.Container>
-          <S.HomeIcon to='/'>
-            <Home size={'100%'} />
-          </S.HomeIcon>
-          <S.QuestionSection>
-            <S.Subject>{current.word}</S.Subject>
-          </S.QuestionSection>
-          <S.InputSection onSubmit={onSubmit} ref={value}>
-            <S.Blackboard>
-              <S.NumberOfQuestion>
-                <S.Current>{t('current', { current: count })}</S.Current>
-                <S.Total>{t('total', { total: total })} </S.Total>
-              </S.NumberOfQuestion>
-              {showResult ? <AnswerResult id={current.id} /> : <Input />}
-            </S.Blackboard>
-          </S.InputSection>
+          {!list.length ? (
+            <>
+              <S.HomeIcon to='/'>
+                <Home size={'100%'} />
+              </S.HomeIcon>
+              <S.QuestionSection>
+                <S.Subject>{current.word}</S.Subject>
+              </S.QuestionSection>
+              <S.InputSection onSubmit={onSubmit} ref={value}>
+                <S.Blackboard>
+                  <S.NumberOfQuestion>
+                    <S.Current>{t('current', { current: count })}</S.Current>
+                    <S.Total>{t('total', { total: total })} </S.Total>
+                  </S.NumberOfQuestion>
+                  {showResult ? <AnswerResult id={current.id} /> : <Input />}
+                </S.Blackboard>
+              </S.InputSection>
+            </>
+          ) : (
+            <Finish />
+          )}
         </S.Container>
       )}
     </>
