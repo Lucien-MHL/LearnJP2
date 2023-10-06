@@ -8,10 +8,15 @@ export default function Option(props) {
   const value = useRef()
   const dispatch = useDispatch()
   const handleClick = () => {
-    const { sound } = props.current
     const v = value.current.innerText
     if (v) {
-      dispatch(checkAnswer({ user: v, truly: sound }))
+      dispatch(
+        checkAnswer({
+          user: v,
+          truly: props.current.sound,
+          id: props.current.id,
+        })
+      )
     }
   }
 

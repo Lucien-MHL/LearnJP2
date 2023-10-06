@@ -1,38 +1,47 @@
 import { useTranslation } from 'react-i18next'
 import { useTheme } from 'styled-components'
 import { useParams } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+import * as q from '../../../../redux/slices/questionSlice'
+import * as a from '../../../../redux/slices/answerSlice'
 import { S } from './styles'
 
 export default function Finish() {
   const { category } = useParams()
   const { t } = useTranslation()
   const { red, green } = useTheme()
-  /** TODO:
-   *    暫時的假資料，用以測試畫面。
-   *    等撰寫此業的邏輯時，即可刪除。
-   */
-  const fakeData = [
-    { fail: 'aws', word: 'ア', sound: 'a', id: '1dc2c4d690ee8bdf' },
-    { fail: 'aws', word: 'イ', sound: 'i', id: '60489b5f9cb0ee19' },
-    { fail: 'aws', word: 'ウ', sound: 'u', id: 'c558111f32794060' },
-    { fail: 'aws', word: 'エ', sound: 'e', id: 'fdbe0e8dadf9b900' },
-    { fail: 'aws', word: 'オ', sound: 'o', id: 'b3bd5993aaf52bba' },
-  ]
+  const log = useSelector(state => a.selectById(state, 'log'))
+  const finishTitle = useSelector(state => a.selectById(state, 'finishTitle'))
+  const data = useSelector(state => q.selectById(state, 'data'))
+  const isHaveFails = log.length
+  const failsLog =
+    isHaveFails &&
+    log.map(i => {
+      const v = data.find(e => e.id === i.id)
+      return {
+        word: v.word,
+        sound: v.sound,
+        fail: i.user,
+        id: i.id,
+      }
+    })
 
   return (
     <>
       <S.Header>
-        <S.Title>{t('finish.all_fail')}</S.Title>
+        <S.Title>{t(`finish.${finishTitle}`)}</S.Title>
       </S.Header>
-      <S.FailingDisplay>
-        {fakeData.map(i => (
-          <S.Row key={i.id}>
-            <S.Item>{i.word}</S.Item>
-            <S.Item $color={green}>{i.sound}</S.Item>
-            <S.Item $color={red}>{i.fail}</S.Item>
-          </S.Row>
-        ))}
-      </S.FailingDisplay>
+      {isHaveFails ? (
+        <S.FailingDisplay>
+          {failsLog.map(i => (
+            <S.Row key={i.id}>
+              <S.Item>{i.word}</S.Item>
+              <S.Item $color={green}>{i.sound}</S.Item>
+              <S.Item $color={red}>{i.fail}</S.Item>
+            </S.Row>
+          ))}
+        </S.FailingDisplay>
+      ) : null}
       <S.LinkGroup>
         <S.link to='/'>{t('back_to_home')}</S.link>
         <S.link to={`/${category}`}>{t('retry')}</S.link>
