@@ -1,4 +1,4 @@
-import{s as t,L as o,j as i}from"./index-517138ac.js";import{l as a}from"./linkData-014fedd8.js";import{u as s}from"./useTranslation-35c2144e.js";const n={Container:t.div`
+import{s as t,L as o,j as i}from"./index-4118e82b.js";import{l as a}from"./linkData-1b7e84ea.js";import{u as s}from"./useTranslation-dcd22c57.js";const n={Container:t.div`
     width: 100%;
     height: 100%;
     display: flex;
