@@ -1,4 +1,4 @@
-import{s as n,L as j,u as h,a as k,r as g,j as t,c as S,n as _,J as C,b as T,d as I,e as R,f as m,g as F}from"./index-d05cc825.js";import{u as $,P as D,H as L}from"./Wrong-a594620b.js";import{u as b}from"./useTranslation-390f462a.js";const l={Container:n.div`
+import{s as n,L as v,u as p,a as m,r as g,j as t,c as C,n as I,J as _,b as R,d as F,e as L,f as y,g as P}from"./index-4c4eca88.js";import{u as z,P as D,H}from"./Wrong-8e50cbcd.js";import{u as j}from"./useTranslation-de8c6b15.js";const d={Container:n.div`
     width: 1000px;
     height: 95%;
     margin: auto;
@@ -11,7 +11,9 @@ import{s as n,L as j,u as h,a as k,r as g,j as t,c as S,n as _,J as C,b as T,d a
     border: 1px solid ${({theme:e})=>e.white+"aa"};
     position: relative;
     user-select: none;
-  `,HomeIcon:n(j)`
+    display: flex;
+    flex-direction: column;
+  `,HomeIcon:n(v)`
     display: block;
     position: absolute;
     z-index: 1;
@@ -118,7 +120,7 @@ import{s as n,L as j,u as h,a as k,r as g,j as t,c as S,n as _,J as C,b as T,d a
     text-align: center;
     font-size: 1.5rem;
     font-family: BIZUDPMincho, sans-serif;
-  `};function v({id:e}){const{t:s}=b(),p=$(),o=h(c=>k(c,"answer")),r={key:"keydown",func:c=>{if(c.code==="Space"){p(S()),p(_(e));return}}};return g.useEffect(()=>(document.addEventListener(r.key,r.func),()=>document.removeEventListener(r.key,r.func)),[r.func,r.key]),t.jsxs(x.Container,{children:[t.jsxs(x.ResultSection,{$color:o.color,children:[t.jsx(x.PreFix,{children:o.result?"O":"X"}),t.jsx(x.Text,{children:s(`answer.${o.text}`)})]}),!o.result&&t.jsxs(x.Comparison,{children:[t.jsx(x.Txt,{children:s("comparison.user",{u:o.user})}),t.jsx(x.Txt,{children:s("comparison.truly",{t:o.truly})})]}),t.jsx(x.PressToNext,{children:s("next_subject.web")})]})}v.propTypes={id:D.string};const P={Input:n.input`
+  `};function S({id:e}){const{t:r}=j(),u=z(),o=p(l=>m(l,"answer")),i={key:"keydown",func:l=>{if(l.code==="Space"){u(C()),u(I(e));return}}};return g.useEffect(()=>(document.addEventListener(i.key,i.func),()=>document.removeEventListener(i.key,i.func)),[i.func,i.key]),t.jsxs(x.Container,{children:[t.jsxs(x.ResultSection,{$color:o.color,children:[t.jsx(x.PreFix,{children:o.result?"O":"X"}),t.jsx(x.Text,{children:r(`answer.${o.text}`)})]}),!o.result&&t.jsxs(x.Comparison,{children:[t.jsx(x.Txt,{children:r("comparison.user",{u:o.user})}),t.jsx(x.Txt,{children:r("comparison.truly",{t:o.truly})})]}),t.jsx(x.PressToNext,{children:r("next_subject.web")})]})}S.propTypes={id:D.string};const B={Input:n.input`
     appearance: none;
     border: none;
     outline: none;
@@ -127,7 +129,7 @@ import{s as n,L as j,u as h,a as k,r as g,j as t,c as S,n as _,J as C,b as T,d a
     height: 100%;
     font-size: 5rem;
     text-align: center;
-  `};function O(){const{t:e}=b(),[s,p]=g.useState(""),o=r=>{const c=r.target.value;p(c.replace(/[^a-z]/,""))};return t.jsx(P.Input,{type:"text",placeholder:e("input_answer"),maxLength:3,onChange:o,value:s,autoFocus:!0})}const d={Header:n.header`
+  `};function E(){const{t:e}=j(),[r,u]=g.useState(""),o=i=>{const l=i.target.value;u(l.replace(/[^a-z]/,""))};return t.jsx(B.Input,{type:"text",placeholder:e("input_answer"),maxLength:3,onChange:o,value:r,autoFocus:!0})}const c={Header:n.header`
     display: flex;
     justify-content: center;
     padding: 50px;
@@ -169,7 +171,7 @@ import{s as n,L as j,u as h,a as k,r as g,j as t,c as S,n as _,J as C,b as T,d a
     width: 33%;
     text-align: center;
     font-size: 36px;
-    color: ${({$color:e,theme:s})=>e||s.mercury};
+    color: ${({$color:e,theme:r})=>e||r.mercury};
 
     &:nth-child(1) {
       font-size: 48px;
@@ -178,35 +180,30 @@ import{s as n,L as j,u as h,a as k,r as g,j as t,c as S,n as _,J as C,b as T,d a
     display: flex;
     align-items: center;
     justify-content: center;
-    /* TODO: 
-         如果有錯誤的題目，則 margin-top 為 85px，
-         其餘則為 auto。
-     */
-    margin-top: auto;
     height: 35%;
-  `,link:n(j)`
+    margin-top: ${({$marginTop:e})=>e};
+  `,link:n(v)`
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
-    width: 110px;
-    height: 230px;
+    width: 90px;
+    height: 215px;
     margin: 0 25px;
     text-decoration: none;
     writing-mode: vertical-lr;
     color: ${({theme:e})=>e.mine_shaft};
-    font-size: 22px;
     user-select: none;
     text-align: center;
     transition: translate 0.2s ease-in-out;
 
     &:nth-child(1) {
-      font-size: 44px;
+      font-size: 36px;
     }
 
     &:nth-child(2) {
-      font-size: 32px;
+      font-size: 28px;
     }
 
     &::after {
@@ -227,4 +224,4 @@ import{s as n,L as j,u as h,a as k,r as g,j as t,c as S,n as _,J as C,b as T,d a
     &:hover {
       translate: 0 -10px;
     }
-  `};function H(){const{t:e}=b(),{red:s,green:p}=C(),{category:o}=T(),r=g.useMemo(()=>{const a=Object.keys(I).filter(u=>u!==o),f=[{name:e("back_to_home"),link:"/"},{name:e("retry"),link:`/${o}`}];return a.map(u=>({name:e("go_challenge",{name:e(u)}),link:`/${u}`})).reduce((u,i)=>[...u,i],[...f])},[o,e]),c=[{fail:"aws",word:"ア",sound:"a",id:"1dc2c4d690ee8bdf"},{fail:"aws",word:"イ",sound:"i",id:"60489b5f9cb0ee19"},{fail:"aws",word:"ウ",sound:"u",id:"c558111f32794060"},{fail:"aws",word:"エ",sound:"e",id:"fdbe0e8dadf9b900"},{fail:"aws",word:"オ",sound:"o",id:"b3bd5993aaf52bba"}];return t.jsxs(t.Fragment,{children:[t.jsx(d.Header,{children:t.jsx(d.Title,{children:e("finish.well_done")})}),t.jsx(d.FailingDisplay,{children:c.map(a=>t.jsxs(d.Row,{children:[t.jsx(d.Item,{children:a.word}),t.jsx(d.Item,{$color:p,children:a.sound}),t.jsx(d.Item,{$color:s,children:a.fail})]},a.id))}),t.jsx(d.LinkGroup,{children:r.map((a,f)=>t.jsx(d.link,{to:a.link,children:a.name},f))})]})}function Q(){const{t:e}=b(),s=R(),p=$(),o=h(i=>m(i,"current")),r=h(i=>m(i,"total")),c=h(i=>m(i,"count")),a=h(i=>m(i,"list")),f=h(i=>k(i,"showResult")),w=g.useRef(),u=i=>{i.preventDefault();const y=w.current[0].value;if(y){const z={user:y,truly:o.sound};p(F(z))}else return};return t.jsx(t.Fragment,{children:s.isResize()?t.jsx("h1",{children:"請改回正確的裝置大小"}):t.jsx(l.Container,{children:a.length?t.jsx(H,{}):t.jsxs(t.Fragment,{children:[t.jsx(l.HomeIcon,{to:"/",children:t.jsx(L,{size:"100%"})}),t.jsx(l.QuestionSection,{children:t.jsx(l.Subject,{children:o.word})}),t.jsx(l.InputSection,{onSubmit:u,ref:w,children:t.jsxs(l.Blackboard,{children:[t.jsxs(l.NumberOfQuestion,{children:[t.jsx(l.Current,{children:e("current",{current:c})}),t.jsxs(l.Total,{children:[e("total",{total:r})," "]})]}),f?t.jsx(v,{id:o.id}):t.jsx(O,{})]})})]})})})}export{Q as default};
+  `};function N(){const{t:e}=j(),{red:r,green:u}=_(),{category:o}=R(),i=p(a=>m(a,"log")),l=p(a=>m(a,"finishTitle")),[h,b]=g.useMemo(()=>{const a=F[o];return[!!i.length,i.map(f=>({...a.find(w=>w.id===f.id),user:f.user}))]},[i,o]);return t.jsxs(t.Fragment,{children:[t.jsx(c.Header,{children:t.jsx(c.Title,{children:e(`finish.${l}`)})}),h?t.jsx(c.FailingDisplay,{children:b.map(a=>t.jsxs(c.Row,{children:[t.jsx(c.Item,{children:a.word}),t.jsx(c.Item,{$color:u,children:a.sound}),t.jsx(c.Item,{$color:r,children:a.user})]},a.id))}):null,t.jsxs(c.LinkGroup,{$marginTop:h?"auto":"130px",children:[t.jsx(c.link,{to:"/",children:e("back_to_home")}),t.jsx(c.link,{to:`/${o}`,children:e("retry")})]})]})}function O(){const{t:e}=j(),r=L(),u=z(),o=p(s=>y(s,"current")),i=p(s=>y(s,"total")),l=p(s=>y(s,"count")),h=p(s=>y(s,"list")),b=p(s=>m(s,"log")),a=p(s=>m(s,"showResult")),f=g.useRef(),k=s=>{s.preventDefault();const $=f.current[0].value;if($){const T={user:$,truly:o.sound,id:o.id};u(P(T))}else return},w=g.useMemo(()=>b.length===5?!0:!h.length,[b,h]);return t.jsx(t.Fragment,{children:r.isResize()?t.jsx("h1",{children:"請改回正確的裝置大小"}):t.jsx(d.Container,{children:w?t.jsx(N,{}):t.jsxs(t.Fragment,{children:[t.jsx(d.HomeIcon,{to:"/",children:t.jsx(H,{size:"100%"})}),t.jsx(d.QuestionSection,{children:t.jsx(d.Subject,{children:o.word})}),t.jsx(d.InputSection,{onSubmit:k,ref:f,children:t.jsxs(d.Blackboard,{children:[t.jsxs(d.NumberOfQuestion,{children:[t.jsx(d.Current,{children:e("current",{current:l})}),t.jsxs(d.Total,{children:[e("total",{total:i})," "]})]}),a?t.jsx(S,{id:o.id}):t.jsx(E,{})]})})]})})})}export{O as default};
