@@ -15,6 +15,8 @@ export const S = {
     border: 1px solid ${({ theme }) => theme.white + 'aa'};
     position: relative;
     user-select: none;
+    display: flex;
+    flex-direction: column;
   `,
   HomeIcon: styled(Link)`
     display: block;
