@@ -58,12 +58,8 @@ export const S = {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* TODO: 
-         如果有錯誤的題目，則 margin-top 為 85px，
-         其餘則為 auto。
-     */
-    margin-top: auto;
     height: 35%;
+    margin-top: ${({ $marginTop }) => $marginTop};
   `,
   link: styled(Link)`
     display: flex;
@@ -71,23 +67,22 @@ export const S = {
     align-items: center;
     justify-content: center;
     position: relative;
-    width: 110px;
-    height: 230px;
+    width: 90px;
+    height: 215px;
     margin: 0 25px;
     text-decoration: none;
     writing-mode: vertical-lr;
     color: ${({ theme }) => theme.mine_shaft};
-    font-size: 22px;
     user-select: none;
     text-align: center;
     transition: translate 0.2s ease-in-out;
 
     &:nth-child(1) {
-      font-size: 44px;
+      font-size: 36px;
     }
 
     &:nth-child(2) {
-      font-size: 32px;
+      font-size: 28px;
     }
 
     &::after {

@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useMemo, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector, useDispatch } from 'react-redux'
 import { S } from './styles'
@@ -18,16 +18,20 @@ export default function WebView() {
   const total = useSelector(state => q.selectById(state, 'total'))
   const count = useSelector(state => q.selectById(state, 'count'))
   const list = useSelector(state => q.selectById(state, 'list'))
+  const log = useSelector(state => a.selectById(state, 'log'))
   const showResult = useSelector(state => a.selectById(state, 'showResult'))
   const value = useRef()
   const onSubmit = e => {
     e.preventDefault()
     const v = value.current[0].value
     if (v) {
-      const payload = { user: v, truly: current.sound }
+      const payload = { user: v, truly: current.sound, id: current.id }
       dispatch(a.checkAnswer(payload))
     } else return
   }
+  const isFinish = useMemo(() => {
+    return log.length === 5 ? true : list.length ? false : true
+  }, [log, list])
 
   return (
     <>
@@ -46,7 +50,9 @@ export default function WebView() {
               2. 都答對才結束遊戲。
               3. 都答對但錯誤不到五題。
          */}
-          {!list.length ? (
+          {isFinish ? (
+            <Finish />
+          ) : (
             <>
               <S.HomeIcon to='/'>
                 <Home size={'100%'} />
@@ -64,8 +70,6 @@ export default function WebView() {
                 </S.Blackboard>
               </S.InputSection>
             </>
-          ) : (
-            <Finish />
           )}
         </S.Container>
       )}
