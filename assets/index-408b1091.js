@@ -1,4 +1,4 @@
-import{s as n,L as v,u as j,a as z,b as p,c as m,r as g,j as t,e as C,n as I,P as _,J as R,f as F,d as L,g as P,h as y,H as D,i as H}from"./index-2ee6cce9.js";const d={Container:n.div`
+import{s as n,L as v,u as y,a as z,b as p,c as h,r as f,j as t,e as _,n as R,P as F,J as C,f as L,d as P,g as D,h as j,H,i as B}from"./index-ad2adce3.js";import{C as E}from"./index-0e113e47.js";const c={Container:n.div`
     width: 1000px;
     height: 95%;
     margin: auto;
@@ -29,6 +29,21 @@ import{s as n,L as v,u as j,a as z,b as p,c as m,r as g,j as t,e as C,n as I,P a
     text-decoration: none;
     color: ${({theme:e})=>e.mine_shaft};
     cursor: pointer;
+
+    &:hover {
+      scale: 1.05;
+    }
+  `,ChartIcon:n.div`
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 150px;
+    left: -40px;
+    background: ${({theme:e})=>e.white+"33"};
+    box-shadow: 2px 4px 40px ${({theme:e})=>e.black+"22"};
+    border: 1px solid ${({theme:e})=>e.white+"aa"};
+    border-radius: 50%;
+    z-index: 1;
 
     &:hover {
       scale: 1.05;
@@ -86,7 +101,7 @@ import{s as n,L as v,u as j,a as z,b as p,c as m,r as g,j as t,e as C,n as I,P a
     font-size: 2rem;
   `,Total:n.p`
     font-size: 2rem;
-  `},x={Container:n.main`
+  `},u={Container:n.main`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -120,7 +135,7 @@ import{s as n,L as v,u as j,a as z,b as p,c as m,r as g,j as t,e as C,n as I,P a
     text-align: center;
     font-size: 1.5rem;
     font-family: BIZUDPMincho, sans-serif;
-  `};function S({id:e}){const{t:r}=j(),u=z(),i=p(l=>m(l,"answer")),o={key:"keydown",func:l=>{if(l.code==="Space"){u(C()),u(I(e));return}}};return g.useEffect(()=>(document.addEventListener(o.key,o.func),()=>document.removeEventListener(o.key,o.func)),[o.func,o.key]),t.jsxs(x.Container,{children:[t.jsxs(x.ResultSection,{$color:i.color,children:[t.jsx(x.PreFix,{children:i.result?"O":"X"}),t.jsx(x.Text,{children:r(`answer.${i.text}`)})]}),!i.result&&t.jsxs(x.Comparison,{children:[t.jsx(x.Txt,{children:r("comparison.user",{u:i.user})}),t.jsx(x.Txt,{children:r("comparison.truly",{t:i.truly})})]}),t.jsx(x.PressToNext,{children:r("next_subject.web")})]})}S.propTypes={id:_.string};const B={Input:n.input`
+  `};function S({id:e}){const{t:a}=y(),x=z(),i=p(d=>h(d,"answer")),o={key:"keydown",func:d=>{if(d.code==="Space"){x(_()),x(R(e));return}}};return f.useEffect(()=>(document.addEventListener(o.key,o.func),()=>document.removeEventListener(o.key,o.func)),[o.func,o.key]),t.jsxs(u.Container,{children:[t.jsxs(u.ResultSection,{$color:i.color,children:[t.jsx(u.PreFix,{children:i.result?"O":"X"}),t.jsx(u.Text,{children:a(`answer.${i.text}`)})]}),!i.result&&t.jsxs(u.Comparison,{children:[t.jsx(u.Txt,{children:a("comparison.user",{u:i.user})}),t.jsx(u.Txt,{children:a("comparison.truly",{t:i.truly})})]}),t.jsx(u.PressToNext,{children:a("next_subject.web")})]})}S.propTypes={id:F.string};const N={Input:n.input`
     appearance: none;
     border: none;
     outline: none;
@@ -129,7 +144,7 @@ import{s as n,L as v,u as j,a as z,b as p,c as m,r as g,j as t,e as C,n as I,P a
     height: 100%;
     font-size: 5rem;
     text-align: center;
-  `};function E(){const{t:e}=j(),[r,u]=g.useState(""),i=o=>{const l=o.target.value;u(l.replace(/[^a-z]/,""))};return t.jsx(B.Input,{type:"text",placeholder:e("input_answer"),maxLength:3,onChange:i,value:r,autoFocus:!0})}const c={Header:n.header`
+  `};function Q(){const{t:e}=y(),[a,x]=f.useState(""),i=o=>{const d=o.target.value;x(d.replace(/[^a-z]/,""))};return t.jsx(N.Input,{type:"text",placeholder:e("input_answer"),maxLength:3,onChange:i,value:a,autoFocus:!0})}const l={Header:n.header`
     display: flex;
     justify-content: center;
     padding: 50px;
@@ -171,7 +186,7 @@ import{s as n,L as v,u as j,a as z,b as p,c as m,r as g,j as t,e as C,n as I,P a
     width: 33%;
     text-align: center;
     font-size: 36px;
-    color: ${({$color:e,theme:r})=>e||r.mercury};
+    color: ${({$color:e,theme:a})=>e||a.mercury};
 
     &:nth-child(1) {
       font-size: 48px;
@@ -224,4 +239,4 @@ import{s as n,L as v,u as j,a as z,b as p,c as m,r as g,j as t,e as C,n as I,P a
     &:hover {
       translate: 0 -10px;
     }
-  `};function N(){const{t:e}=j(),{red:r,green:u}=R(),{category:i}=F(),o=p(a=>m(a,"log")),l=p(a=>m(a,"finishTitle")),[h,b]=g.useMemo(()=>{const a=L[i];return[!!o.length,o.map(f=>({...a.find(w=>w.id===f.id),user:f.user}))]},[o,i]);return t.jsxs(t.Fragment,{children:[t.jsx(c.Header,{children:t.jsx(c.Title,{children:e(`finish.${l}`)})}),h?t.jsx(c.FailingDisplay,{children:b.map(a=>t.jsxs(c.Row,{children:[t.jsx(c.Item,{children:a.word}),t.jsx(c.Item,{$color:u,children:a.sound}),t.jsx(c.Item,{$color:r,children:a.user})]},a.id))}):null,t.jsxs(c.LinkGroup,{$marginTop:h?"auto":"130px",children:[t.jsx(c.link,{to:"/",children:e("back_to_home")}),t.jsx(c.link,{to:`/${i}`,children:e("retry")})]})]})}function A(){const{t:e}=j(),r=P(),u=z(),i=p(s=>y(s,"current")),o=p(s=>y(s,"total")),l=p(s=>y(s,"count")),h=p(s=>y(s,"list")),b=p(s=>m(s,"log")),a=p(s=>m(s,"showResult")),f=g.useRef(),k=s=>{s.preventDefault();const $=f.current[0].value;if($){const T={user:$,truly:i.sound,id:i.id};u(H(T))}else return},w=g.useMemo(()=>b.length===5?!0:!h.length,[b,h]);return t.jsx(t.Fragment,{children:r.isResize()?t.jsx("h1",{children:"請改回正確的裝置大小"}):t.jsx(d.Container,{children:w?t.jsx(N,{}):t.jsxs(t.Fragment,{children:[t.jsx(d.HomeIcon,{to:"/",children:t.jsx(D,{size:"100%"})}),t.jsx(d.QuestionSection,{children:t.jsx(d.Subject,{children:i.word})}),t.jsx(d.InputSection,{onSubmit:k,ref:f,children:t.jsxs(d.Blackboard,{children:[t.jsxs(d.NumberOfQuestion,{children:[t.jsx(d.Current,{children:e("current",{current:l})}),t.jsxs(d.Total,{children:[e("total",{total:o})," "]})]}),a?t.jsx(S,{id:i.id}):t.jsx(E,{})]})})]})})})}export{A as default};
+  `};function A(){const{t:e}=y(),{red:a,green:x}=C(),{category:i}=L(),o=p(s=>h(s,"log")),d=p(s=>h(s,"finishTitle")),[m,g]=f.useMemo(()=>{const s=P[i];return[!!o.length,o.map(b=>({...s.find(k=>k.id===b.id),user:b.user}))]},[o,i]);return t.jsxs(t.Fragment,{children:[t.jsx(l.Header,{children:t.jsx(l.Title,{children:e(`finish.${d}`)})}),m?t.jsx(l.FailingDisplay,{children:g.map(s=>t.jsxs(l.Row,{children:[t.jsx(l.Item,{children:s.word}),t.jsx(l.Item,{$color:x,children:s.sound}),t.jsx(l.Item,{$color:a,children:s.user})]},s.id))}):null,t.jsxs(l.LinkGroup,{$marginTop:m?"auto":"130px",children:[t.jsx(l.link,{to:"/",children:e("back_to_home")}),t.jsx(l.link,{to:`/${i}`,children:e("retry")})]})]})}function G(){const{t:e}=y(),{mine_shaft:a}=C(),x=D(),i=z(),o=p(r=>j(r,"current")),d=p(r=>j(r,"total")),m=p(r=>j(r,"count")),g=p(r=>j(r,"list")),s=p(r=>h(r,"log")),b=p(r=>h(r,"showResult")),w=f.useRef(),k=r=>{r.preventDefault();const $=w.current[0].value;if($){const T={user:$,truly:o.sound,id:o.id};i(B(T))}else return},I=f.useMemo(()=>s.length===5?!0:!g.length,[s,g]);return t.jsx(t.Fragment,{children:x.isResize()?t.jsx("h1",{children:"請改回正確的裝置大小"}):t.jsx(c.Container,{children:I?t.jsx(A,{}):t.jsxs(t.Fragment,{children:[t.jsx(c.HomeIcon,{to:"/",children:t.jsx(H,{size:"100%"})}),t.jsx(c.ChartIcon,{children:t.jsx(E,{color:a,size:"60px",position:{top:10,left:10}})}),t.jsx(c.QuestionSection,{children:t.jsx(c.Subject,{children:o.word})}),t.jsx(c.InputSection,{onSubmit:k,ref:w,children:t.jsxs(c.Blackboard,{children:[t.jsxs(c.NumberOfQuestion,{children:[t.jsx(c.Current,{children:e("current",{current:m})}),t.jsxs(c.Total,{children:[e("total",{total:d})," "]})]}),b?t.jsx(S,{id:o.id}):t.jsx(Q,{})]})})]})})})}export{G as default};
