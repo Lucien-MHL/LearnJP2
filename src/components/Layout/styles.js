@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components'
 
 const webBackground = css`
-  position: relative;
   background-image: url('./templeWithFuji.jpg');
   background-position: center;
   background-repeat: no-repeat;
@@ -32,6 +31,7 @@ export const S = {
   Container: styled.div`
     width: 100%;
     height: 100%;
+    position: relative;
     ${({ $isMobile }) => ($isMobile ? mobileBackground : webBackground)}
   `,
 }

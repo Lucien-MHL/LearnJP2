@@ -31,5 +31,6 @@
   },
   "back_to_home": "回首頁",
   "retry": "再挑戰一次",
-  "go_challenge": "挑戰 {{name}}"
+  "go_challenge": "挑戰 {{name}}",
+  "fails_log": "錯誤記錄區"
 }

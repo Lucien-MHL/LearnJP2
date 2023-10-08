@@ -9,6 +9,7 @@ import * as answer from '../../../redux/slices/answerSlice'
 import Option from './Option'
 import AnswerResult from './AnswerResult'
 import Finish from './Finish'
+import ChartIcon from '../ChartIcon'
 
 export default function MobileView() {
   const { t } = useTranslation()
@@ -51,6 +52,7 @@ export default function MobileView() {
               <S.HomeIcon to='/'>
                 <Home />
               </S.HomeIcon>
+              <ChartIcon />
               <S.QuestionSection>
                 <S.Subject>{current.word}</S.Subject>
                 <S.Count>{`${count}/${total}`}</S.Count>
