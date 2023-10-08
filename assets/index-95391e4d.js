@@ -1,24 +1,24 @@
-import{s as t,L as o,j as i}from"./index-4c4eca88.js";import{l as a}from"./linkData-1c784f35.js";import{u as s}from"./useTranslation-de8c6b15.js";const n={Container:t.div`
+import{s as n,L as o,u as a,j as t}from"./index-2ee6cce9.js";import{l as s}from"./linkData-2fc23b0e.js";const i={Container:n.div`
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     color: ${({theme:e})=>e.mercury};
-  `,Title:t.header`
+  `,Title:n.header`
     margin-top: 40px;
     text-align: center;
     user-select: none;
-  `,Main:t.p`
+  `,Main:n.p`
     font-size: 4.5rem;
-  `,Sub:t.p`
+  `,Sub:n.p`
     font-size: 3.15rem;
-  `,LinkGroup:t.main`
+  `,LinkGroup:n.main`
     width: 300px;
     display: flex;
     justify-content: space-between;
     margin: auto;
-  `,LinkButton:t(o)`
+  `,LinkButton:n(o)`
     color: ${({theme:e})=>e.mercury};
     writing-mode: vertical-lr;
     text-decoration: none;
@@ -34,4 +34,4 @@ import{s as t,L as o,j as i}from"./index-4c4eca88.js";import{l as a}from"./linkD
     &:nth-child(odd) {
       translate: 0 -15px;
     }
-  `};function m(){const{t:e}=s();return i.jsxs(n.Container,{children:[i.jsxs(n.Title,{children:[i.jsx(n.Main,{children:e("homepage_title.main")}),i.jsx(n.Sub,{children:e("homepage_title.sub")})]}),i.jsx(n.LinkGroup,{children:a().map(r=>i.jsx(n.LinkButton,{to:r.link,children:e(r.key)},r.key))})]})}export{m as default};
+  `};function c(){const{t:e}=a();return t.jsxs(i.Container,{children:[t.jsxs(i.Title,{children:[t.jsx(i.Main,{children:e("homepage_title.main")}),t.jsx(i.Sub,{children:e("homepage_title.sub")})]}),t.jsx(i.LinkGroup,{children:s().map(r=>t.jsx(i.LinkButton,{to:r.link,children:e(r.key)},r.key))})]})}export{c as default};

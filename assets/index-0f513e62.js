@@ -1,4 +1,4 @@
-import{s as t,L as r,j as n}from"./index-4c4eca88.js";import{l as a}from"./linkData-1c784f35.js";import{u as s}from"./useTranslation-de8c6b15.js";const i={Container:t.div`
+import{s as t,L as a,u as r,j as n}from"./index-2ee6cce9.js";import{l as s}from"./linkData-2fc23b0e.js";const i={Container:t.div`
     height: 100%;
     margin: auto;
     display: flex;
@@ -16,7 +16,7 @@ import{s as t,L as r,j as n}from"./index-4c4eca88.js";import{l as a}from"./linkD
   `,ListSection:t.section`
     display: flex;
     margin: auto;
-  `,LinkButton:t(r)`
+  `,LinkButton:t(a)`
     position: relative;
     color: ${({theme:e})=>e.mine_shaft};
     font-size: 1.75rem;
@@ -55,4 +55,4 @@ import{s as t,L as r,j as n}from"./index-4c4eca88.js";import{l as a}from"./linkD
     &:hover {
       translate: 0 -10px;
     }
-  `};function p(){const{t:e}=s();return n.jsxs(i.Container,{children:[n.jsxs(i.Header,{children:[n.jsx(i.Main,{children:e("homepage_title.main")}),n.jsx(i.Sub,{children:e("homepage_title.sub")})]}),n.jsx(i.ListSection,{children:a().map(o=>n.jsx(i.LinkButton,{to:o.link,children:e(o.key)},o.key))})]})}export{p as default};
+  `};function d(){const{t:e}=r();return n.jsxs(i.Container,{children:[n.jsxs(i.Header,{children:[n.jsx(i.Main,{children:e("homepage_title.main")}),n.jsx(i.Sub,{children:e("homepage_title.sub")})]}),n.jsx(i.ListSection,{children:s().map(o=>n.jsx(i.LinkButton,{to:o.link,children:e(o.key)},o.key))})]})}export{d as default};
