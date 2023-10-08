@@ -1,7 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { useTheme } from 'styled-components'
 import { useSelector, useDispatch } from 'react-redux'
-// import PropType from 'prop-types'
 import { S } from './styles'
 import { selectById } from '../../redux/slices/answerSlice'
 import { selectSwitchById, closeModal } from '../../redux/slices/switchSlice'
@@ -17,7 +16,6 @@ export default function Modal() {
     selectSwitchById(state, 'isModalOpen')
   )
   const getList = useData(log)
-  //   const {} = props
 
   return (
     <>
@@ -48,5 +46,3 @@ export default function Modal() {
     </>
   )
 }
-
-Modal.propTypes = {}

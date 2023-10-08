@@ -19,7 +19,11 @@ export default function ChartIcon(props) {
   const dispatch = useDispatch()
   const log = useSelector(state => selectById(state, 'log'))
   const shouldShow = log.length ? true : false
-  const { size = defaultStyles.size, position = defaultStyles.position } = props
+  const {
+    size = defaultStyles.size,
+    position = defaultStyles.position,
+    color = mercury,
+  } = props
 
   if (!shouldShow) return null
 
@@ -27,7 +31,7 @@ export default function ChartIcon(props) {
     <S.IconSection $size={size} $position={position}>
       <S.Clickable onClick={() => dispatch(openModal())} />
       <S.ShowFailsNumber>{log.length}</S.ShowFailsNumber>
-      <Chart color={mercury} />
+      <Chart color={color} />
     </S.IconSection>
   )
 }
@@ -40,4 +44,5 @@ ChartIcon.propTypes = {
     right: PropType.number,
     bottom: PropType.number,
   }),
+  color: PropType.string,
 }

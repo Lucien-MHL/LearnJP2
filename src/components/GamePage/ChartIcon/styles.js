@@ -13,6 +13,7 @@ export const S = {
     position: absolute;
     width: 100%;
     height: 100%;
+    cursor: pointer;
   `,
   ShowFailsNumber: styled.p`
     position: absolute;

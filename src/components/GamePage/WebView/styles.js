@@ -39,6 +39,22 @@ export const S = {
       scale: 1.05;
     }
   `,
+  ChartIcon: styled.div`
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 150px;
+    left: -40px;
+    background: ${({ theme }) => theme.white + '33'};
+    box-shadow: 2px 4px 40px ${({ theme }) => theme.black + '22'};
+    border: 1px solid ${({ theme }) => theme.white + 'aa'};
+    border-radius: 50%;
+    z-index: 1;
+
+    &:hover {
+      scale: 1.05;
+    }
+  `,
   QuestionSection: styled.section`
     width: 100%;
     height: 50%;
