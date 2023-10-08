@@ -35,6 +35,7 @@ export const S = {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
   `,
   Title: styled.p`
     color: ${({ theme }) => theme.mercury};

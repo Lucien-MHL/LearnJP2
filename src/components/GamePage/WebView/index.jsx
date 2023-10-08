@@ -1,6 +1,7 @@
 import { useMemo, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector, useDispatch } from 'react-redux'
+import { useTheme } from 'styled-components'
 import { S } from './styles'
 import { Home } from '../../../assets/icons'
 import { useDevice } from '../../../hooks'
@@ -9,9 +10,11 @@ import * as a from '../../../redux/slices/answerSlice'
 import AnswerResult from './AnswerResult'
 import Input from './Input'
 import Finish from './Finish'
+import ChartIcon from '../ChartIcon'
 
 export default function WebView() {
   const { t } = useTranslation()
+  const { mine_shaft } = useTheme()
   const device = useDevice()
   const dispatch = useDispatch()
   const current = useSelector(state => q.selectById(state, 'current'))
@@ -57,6 +60,13 @@ export default function WebView() {
               <S.HomeIcon to='/'>
                 <Home size={'100%'} />
               </S.HomeIcon>
+              <S.ChartIcon>
+                <ChartIcon
+                  color={mine_shaft}
+                  size={'60px'}
+                  position={{ top: 10, left: 10 }}
+                />
+              </S.ChartIcon>
               <S.QuestionSection>
                 <S.Subject>{current.word}</S.Subject>
               </S.QuestionSection>
