@@ -32,5 +32,6 @@
   "back_to_home": "回首頁",
   "retry": "再挑戰一次",
   "go_challenge": "挑戰 {{name}}",
-  "fails_log": "錯誤記錄區"
+  "fails_log": "錯誤記錄區",
+  "data_wont_save": "注意: 遊玩資料將不會保留。"
 }

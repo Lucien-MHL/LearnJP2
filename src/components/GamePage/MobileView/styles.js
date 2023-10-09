@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
 
 export const S = {
   Container: styled.div`
@@ -9,12 +8,14 @@ export const S = {
     height: 100%;
     margin: auto;
   `,
-  HomeIcon: styled(Link)`
+  HomeIcon: styled.button`
     position: absolute;
     top: 16px;
     left: 16px;
     padding: 2px 4px;
     color: ${({ theme }) => theme.mercury};
+    background: transparent;
+    border: none;
   `,
 
   QuestionSection: styled.section`
