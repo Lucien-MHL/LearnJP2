@@ -1,6 +1,7 @@
 import { useMemo, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector, useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 import { useTheme } from 'styled-components'
 import { S } from './styles'
 import { Home } from '../../../assets/icons'
@@ -36,6 +37,15 @@ export default function WebView() {
     return log.length === 5 ? true : list.length ? false : true
   }, [log, list])
 
+  const navigate = useNavigate()
+
+  const onClick = () => {
+    const alertMsg = window.confirm(t('data_wont_save'))
+    if (alertMsg) {
+      navigate('/')
+    } else return
+  }
+
   return (
     <>
       {device.isResize() ? (
@@ -57,7 +67,7 @@ export default function WebView() {
             <Finish />
           ) : (
             <>
-              <S.HomeIcon to='/'>
+              <S.HomeIcon onClick={onClick}>
                 <Home size={'100%'} />
               </S.HomeIcon>
               <S.ChartIcon>

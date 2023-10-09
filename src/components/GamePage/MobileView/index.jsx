@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { useMemo } from 'react'
 import { S } from './styles'
@@ -13,6 +14,7 @@ import ChartIcon from '../ChartIcon'
 
 export default function MobileView() {
   const { t } = useTranslation()
+  const navigate = useNavigate()
   const device = useDevice()
   const current = useSelector(state => question.selectById(state, 'current'))
   const count = useSelector(state => question.selectById(state, 'count'))
@@ -29,6 +31,13 @@ export default function MobileView() {
   const isFinish = useMemo(() => {
     return shouldFinish ? false : list.length ? true : false
   }, [shouldFinish, list.length])
+
+  const onClick = () => {
+    const alertMsg = window.confirm(t('data_wont_save'))
+    if (alertMsg) {
+      navigate('/')
+    } else return
+  }
 
   return (
     <>
@@ -49,7 +58,7 @@ export default function MobileView() {
            */}
           {isFinish ? (
             <>
-              <S.HomeIcon to='/'>
+              <S.HomeIcon onClick={onClick}>
                 <Home />
               </S.HomeIcon>
               <ChartIcon />

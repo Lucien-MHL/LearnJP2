@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
 
 export const S = {
   Container: styled.div`
@@ -18,7 +17,7 @@ export const S = {
     display: flex;
     flex-direction: column;
   `,
-  HomeIcon: styled(Link)`
+  HomeIcon: styled.button`
     display: block;
     position: absolute;
     z-index: 1;
