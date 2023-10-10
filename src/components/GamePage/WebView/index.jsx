@@ -70,13 +70,15 @@ export default function WebView() {
               <S.HomeIcon onClick={onClick}>
                 <Home size={'100%'} />
               </S.HomeIcon>
-              <S.ChartIcon>
-                <ChartIcon
-                  color={mine_shaft}
-                  size={'60px'}
-                  position={{ top: 10, left: 10 }}
-                />
-              </S.ChartIcon>
+              {log.length ? (
+                <S.ChartIcon>
+                  <ChartIcon
+                    color={mine_shaft}
+                    size={'60px'}
+                    position={{ top: 10, left: 10 }}
+                  />
+                </S.ChartIcon>
+              ) : null}
               <S.QuestionSection>
                 <S.Subject>{current.word}</S.Subject>
               </S.QuestionSection>
